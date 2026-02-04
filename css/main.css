@@ -1,0 +1,332 @@
+/* ==========================================================================
+   RESET + BASE
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    min-height: 100dvh;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* Variabili CSS - tema chiaro (default) */
+:root {
+    --bg-primary: #f0ebe3;
+    --bg-secondary: #f7f4ef;
+    --text-primary: #023859;
+    --text-secondary: #733A09;
+    --accent: #BF0413;
+    --accent-hover: #04D99D;
+    --border: rgba(2, 56, 89, 0.15);
+    --shadow-sm: 0 2px 8px rgba(2, 56, 89, 0.1);
+}
+
+/* Tema scuro - applicato via classe body.dark */
+body.dark {
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --accent: #58a6ff;
+    --accent-hover: #79c0ff;
+    --border: #30363d;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   TIPOGRAFIA + LINK + BOTTONI
+   ========================================================================== */
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover,
+a:focus {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent);
+    color: white;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.22s ease;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--accent-hover);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   HEADER + NAVIGAZIONE
+   ========================================================================== */
+
+header {
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.75rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    padding: 0.5rem 0.25rem;
+    transition: all 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-hover);
+    text-decoration: none;
+}
+
+/* Mobile menu */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+.theme-toggle {
+    cursor: pointer;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+}
+
+/* Language Switcher */
+.lang-switcher {
+    position: relative;
+}
+
+.lang-current {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 0.35rem 0.65rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.lang-current:hover,
+.lang-current:focus {
+    border-color: var(--accent);
+    background-color: var(--bg-primary);
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.35rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: var(--shadow-sm);
+    list-style: none;
+    min-width: 130px;
+    z-index: 1001;
+    overflow: hidden;
+}
+
+.lang-switcher:hover .lang-dropdown,
+.lang-switcher:focus-within .lang-dropdown {
+    display: block;
+}
+
+.lang-dropdown li a {
+    display: block;
+    padding: 0.5rem 0.85rem;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.15s;
+}
+
+.lang-dropdown li a:hover {
+    background-color: var(--bg-primary);
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   MAIN CONTENT WRAPPER
+   ========================================================================== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+footer {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--border);
+}
+
+footer a {
+    color: var(--text-secondary);
+}
+
+footer a:hover {
+    color: var(--accent-hover);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--bg-secondary);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1.5rem;
+        border-top: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+
+    .lang-switcher {
+        order: -1;
+    }
+
+    .lang-dropdown {
+        right: auto;
+        left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.35rem;
+    }
+}
+
+/* ==========================================================================
+   PAGINE LEGALI (Privacy, Contatti)
+   ========================================================================== */
+
+.legal-page {
+    max-width: 800px;
+}
+
+.legal-page h1 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.legal-page .last-updated {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.legal-page section {
+    margin-bottom: 2rem;
+}
+
+.legal-page h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.legal-page p {
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.legal-page ul {
+    margin-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.legal-page li {
+    margin-bottom: 0.35rem;
+}
+
+.legal-page .contact-email {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.legal-page .contact-email a {
+    font-weight: 500;
+}

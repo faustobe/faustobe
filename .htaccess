@@ -1,0 +1,25 @@
+DirectoryIndex index.php
+
+RewriteEngine On
+
+# 0. Don't rewrite the front controller itself
+RewriteRule ^index\.php$ - [L]
+
+# 1. Static files (CSS, JS, images, fonts, APK) — serve directly
+RewriteCond %{REQUEST_URI} \.(css|js|png|jpg|jpeg|gif|svg|ico|woff2?|ttf|eot|apk|webp|avif)$ [NC]
+RewriteRule ^ - [L]
+
+# 2. Existing files — serve directly, EXCEPT .html
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} !\.html$ [NC]
+RewriteRule ^ - [L]
+
+# 3. Backward compatibility: *.html → front controller
+RewriteRule ^(.+)\.html$ index.php?route=$1 [L,QSA]
+
+# 4. Language-prefixed URLs: /en/..., /es/..., /fr/..., /de/...
+RewriteRule ^(en|es|fr|de)/?$ index.php?lang=$1&route= [L,QSA]
+RewriteRule ^(en|es|fr|de)/(.+?)/?$ index.php?lang=$1&route=$2 [L,QSA]
+
+# 5. Italian (default, no prefix): everything else → front controller
+RewriteRule ^(.+?)/?$ index.php?route=$1 [L,QSA]

@@ -1,0 +1,479 @@
+/* ==========================================================================
+   APP PAGE STYLES
+   ========================================================================== */
+
+/* Hero Section */
+.app-hero {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    padding: 2rem 0 3rem;
+    flex-wrap: wrap;
+}
+
+.app-icon img {
+    width: 128px;
+    height: 128px;
+    border-radius: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.app-intro {
+    flex: 1;
+    min-width: 280px;
+}
+
+.app-intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.app-intro .tagline {
+    font-size: 1.25rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.app-intro .description {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.app-buttons img {
+    height: 60px;
+    transition: transform 0.2s;
+}
+
+.app-buttons img:hover {
+    transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+    padding: 3rem 0;
+}
+
+.features h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Screenshots Section */
+.screenshots {
+    padding: 3rem 0;
+}
+
+.screenshots h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.screenshots-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+}
+
+.screenshots-grid img {
+    height: 400px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+/* App Info Section */
+.app-info {
+    padding: 2rem 0;
+}
+
+.app-info h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.info-item strong {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-item span {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+/* Download Section */
+.download-section {
+    padding: 3rem 0;
+    border-top: 1px solid var(--border);
+}
+
+.download-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.download-intro {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.download-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.download-btn,
+.btn-download {
+    display: inline-block;
+    background: #4CAF50;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.download-btn:hover,
+.btn-download:hover {
+    background: #388E3C;
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+.download-size {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.install-instructions {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.install-instructions h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.install-instructions ol {
+    color: var(--text-secondary);
+    margin-left: 1.25rem;
+    line-height: 1.8;
+}
+
+.install-instructions li {
+    margin-bottom: 0.75rem;
+}
+
+.install-instructions ul {
+    margin-top: 0.5rem;
+    margin-left: 1.25rem;
+    font-size: 0.9rem;
+}
+
+.install-note {
+    background: #FFF3E0;
+    border-left: 4px solid #FF9800;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.9rem;
+    color: #5D4037;
+}
+
+[data-theme="dark"] .install-note {
+    background: #3E2723;
+    color: #FFCC80;
+}
+
+/* Badge Coming Soon */
+.badge-coming-soon {
+    display: inline-block;
+    background: var(--bg-secondary);
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Beta Section */
+.beta-section {
+    padding: 3rem 0;
+    border-top: 1px solid var(--border);
+}
+
+.beta-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.beta-intro {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.beta-description {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.beta-form-container {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-placeholder {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+}
+
+/* Beta Form Custom */
+.beta-form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.beta-form .form-group {
+    flex: 1;
+    min-width: 250px;
+}
+
+.beta-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.beta-form input[type="email"] {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.beta-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(191, 4, 19, 0.1);
+}
+
+.beta-form .form-hint {
+    width: 100%;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.beta-form .btn-submit {
+    padding: 0.85rem 1.75rem;
+    white-space: nowrap;
+}
+
+.form-success {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--accent-hover);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.beta-note {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* App Links Section */
+.app-links {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.app-links a {
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   PRIVACY PAGE STYLES
+   ========================================================================== */
+
+.privacy-page {
+    max-width: 800px;
+}
+
+.privacy-page h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.privacy-page .last-updated {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.privacy-page section {
+    margin-bottom: 2rem;
+}
+
+.privacy-page h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.privacy-page h3 {
+    font-size: 1.1rem;
+    margin: 1.25rem 0 0.75rem;
+    color: var(--text-primary);
+}
+
+.privacy-page p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.privacy-page ul {
+    color: var(--text-secondary);
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.privacy-page li {
+    margin-bottom: 0.5rem;
+}
+
+.privacy-page .back-link {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .app-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-intro h1 {
+        font-size: 2rem;
+    }
+
+    .screenshots-grid img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-intro h1 {
+        font-size: 1.75rem;
+    }
+
+    .app-intro .tagline {
+        font-size: 1.1rem;
+    }
+
+    .screenshots-grid img {
+        height: 250px;
+    }
+}
