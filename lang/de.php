@@ -24,8 +24,8 @@ return [
     'meta' => [
         'home_title'       => 'faustobe',
         'home_description' => 'Portfolio eines Android-Entwicklers. Apps, Projekte und Kontakte.',
-        'contact_title'       => 'Kontakt - faustobe',
-        'contact_description' => 'Kontaktieren Sie faustobe f&uuml;r Informationen, Support oder Kooperationen.',
+        'whoami_title'        => 'whoami - faustobe',
+        'whoami_description'  => 'Wer ich bin, was ich mache und wie man mich erreicht.',
         'privacy_title'       => 'Datenschutzerkl&auml;rung - faustobe',
         'privacy_description' => 'Datenschutzerkl&auml;rung von faustobe.',
         'works_title'         => 'Arbeiten - faustobe',
@@ -42,22 +42,19 @@ return [
 
     // Home page
     'home' => [
-        'headline' => 'tuxed and free',
+        'headline'        => 'tuxed and free',
+        'subtitle'        => 'Android-Apps und skalierbare Webl&ouml;sungen',
+        'ecodes_card_desc' => 'Scannen Sie Lebensmittel-Barcodes und entdecken Sie die Zusatzstoffe in Produkten.',
     ],
 
-    // Contact page
-    'contact' => [
-        'title'         => 'Kontakt',
-        'email_title'   => 'E-Mail',
-        'email_text'    => 'F&uuml;r Fragen, Fehlerberichte, Supportanfragen oder Kooperationsvorschl&auml;ge:',
-        'support_title' => 'App-Support',
-        'support_text'  => 'Bei spezifischen Problemen mit Android-Apps, geben Sie bitte in Ihrer Nachricht an:',
-        'support_items' => [
-            'Name und Version der App',
-            'Ger&auml;temodell und Android-Version',
-            'Problembeschreibung',
-        ],
-        'github_title'  => 'GitHub',
+    // Whoami + Contact
+    'whoami' => [
+        'title'         => 'whoami',
+        'p1'            => 'Android, Backend und Automatisierungen. Webdienste &amp; Open Source.',
+        'p2'            => 'Entwicklung individueller L&ouml;sungen.',
+        'contact_title' => 'Kontakt',
+        'contact_text'  => 'F&uuml;r Fragen, Fehlerberichte, Supportanfragen oder Kooperationsvorschl&auml;ge:',
+        'support_text'  => 'Bei spezifischen Problemen mit Android-Apps geben Sie bitte in Ihrer Nachricht den Namen und die Version der App, das Ger&auml;temodell, die Android-Version und eine Problembeschreibung an.',
         'github_text'   => 'Einige Projekte sind Open Source. F&uuml;r Fehlerberichte und Beitr&auml;ge:',
     ],
 
@@ -117,7 +114,7 @@ return [
         'feature_nutri'    => 'Nutri-Score & NOVA',
         'feature_nutri_desc' => 'Zeigen Sie N&auml;hrwertbewertungen und den Verarbeitungsgrad der Produkte an.',
         'feature_lang'     => 'Mehrsprachig',
-        'feature_lang_desc' => 'Oberfl&auml;che auf Italienisch und Englisch, mit Allergen-Erkennung in beiden Sprachen.',
+        'feature_lang_desc' => 'Oberfl&auml;che und Allergen-Erkennung in mehreren Sprachen verf&uuml;gbar.',
 
         // Screenshots
         'screenshots_title' => 'Screenshots',

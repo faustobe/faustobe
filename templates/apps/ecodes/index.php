@@ -112,7 +112,7 @@
     <!-- Links Section -->
     <section class="app-links">
         <a href="<?= url('apps/ecodes/privacy') ?>"><?= t('ecodes.privacy_link') ?></a>
-        <a href="<?= url('contact') ?>"><?= t('ecodes.contact_link') ?></a>
+        <a href="<?= url('whoami') ?>"><?= t('ecodes.contact_link') ?></a>
     </section>
 
 </main>

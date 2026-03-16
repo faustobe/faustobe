@@ -24,8 +24,8 @@ return [
     'meta' => [
         'home_title'       => 'faustobe',
         'home_description' => 'Portfolio de un desarrollador Android. Apps, proyectos y contactos.',
-        'contact_title'       => 'Contacto - faustobe',
-        'contact_description' => 'Contacta con faustobe para informaci&oacute;n, soporte o colaboraciones.',
+        'whoami_title'        => 'whoami - faustobe',
+        'whoami_description'  => 'Qui&eacute;n soy, qu&eacute; hago y c&oacute;mo contactarme.',
         'privacy_title'       => 'Pol&iacute;tica de privacidad - faustobe',
         'privacy_description' => 'Pol&iacute;tica de privacidad de faustobe.',
         'works_title'         => 'Trabajos - faustobe',
@@ -42,22 +42,19 @@ return [
 
     // Home page
     'home' => [
-        'headline' => 'tuxed and free',
+        'headline'        => 'tuxed and free',
+        'subtitle'        => 'Apps Android y soluciones web escalables',
+        'ecodes_card_desc' => 'Escanea c&oacute;digos de barras de alimentos y descubre los aditivos en los productos.',
     ],
 
-    // Contact page
-    'contact' => [
-        'title'         => 'Contacto',
-        'email_title'   => 'Email',
-        'email_text'    => 'Para cualquier pregunta, reporte de errores, solicitud de soporte o propuesta de colaboraci&oacute;n:',
-        'support_title' => 'Soporte de apps',
-        'support_text'  => 'Para problemas espec&iacute;ficos con las apps Android, incluye en tu mensaje:',
-        'support_items' => [
-            'Nombre y versi&oacute;n de la app',
-            'Modelo del dispositivo y versi&oacute;n de Android',
-            'Descripci&oacute;n del problema',
-        ],
-        'github_title'  => 'GitHub',
+    // Whoami + Contact
+    'whoami' => [
+        'title'         => 'whoami',
+        'p1'            => 'Android, backend y automatizaciones. Servicios web &amp; Open Source.',
+        'p2'            => 'Desarrollo de soluciones a medida.',
+        'contact_title' => 'Contacto',
+        'contact_text'  => 'Para cualquier pregunta, reporte de errores, solicitud de soporte o propuesta de colaboraci&oacute;n:',
+        'support_text'  => 'Para problemas espec&iacute;ficos con las apps Android, incluye en tu mensaje el nombre y versi&oacute;n de la app, el modelo del dispositivo, la versi&oacute;n de Android y una descripci&oacute;n del problema.',
         'github_text'   => 'Algunos proyectos son de c&oacute;digo abierto. Para reportes de errores y contribuciones:',
     ],
 
@@ -117,7 +114,7 @@ return [
         'feature_nutri'    => 'Nutri-Score y NOVA',
         'feature_nutri_desc' => 'Visualiza las puntuaciones nutricionales y el grado de procesamiento de los productos.',
         'feature_lang'     => 'Multiling&uuml;e',
-        'feature_lang_desc' => 'Interfaz en italiano e ingl&eacute;s, con detecci&oacute;n de al&eacute;rgenos en ambos idiomas.',
+        'feature_lang_desc' => 'Interfaz y detecci&oacute;n de al&eacute;rgenos disponibles en varios idiomas.',
 
         // Screenshots
         'screenshots_title' => 'Capturas de pantalla',

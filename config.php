@@ -3,8 +3,9 @@
  * Configuration: supported languages and route mapping.
  */
 
-// Base path: set to '' if the site is at the domain root, or '/faustobe' if in a subdirectory
-$BASE_PATH = '/faustobe';
+// Base path: auto-detect environment
+// localhost → subdirectory /faustobe, production → domain root
+$BASE_PATH = ($_SERVER['HTTP_HOST'] ?? '') === 'localhost' ? '/faustobe' : '';
 
 // Supported languages: code => native name
 $SUPPORTED_LANGUAGES = [
@@ -21,7 +22,7 @@ $DEFAULT_LANG = 'it';
 // Route => template file (relative to templates/)
 $ROUTES = [
     ''                    => 'home.php',
-    'contact'             => 'contact.php',
+    'whoami'              => 'whoami.php',
     'privacy-policy'      => 'privacy-policy.php',
     'works'               => 'works.php',
     'apps/ecodes'         => 'apps/ecodes/index.php',

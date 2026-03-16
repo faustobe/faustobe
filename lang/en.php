@@ -24,8 +24,8 @@ return [
     'meta' => [
         'home_title'       => 'faustobe',
         'home_description' => 'Android developer portfolio. Apps, projects and contacts.',
-        'contact_title'       => 'Contact - faustobe',
-        'contact_description' => 'Contact faustobe for information, support or collaborations.',
+        'whoami_title'        => 'whoami - faustobe',
+        'whoami_description'  => 'Who I am, what I do and how to get in touch.',
         'privacy_title'       => 'Privacy Policy - faustobe',
         'privacy_description' => 'faustobe privacy policy.',
         'works_title'         => 'Works - faustobe',
@@ -42,22 +42,19 @@ return [
 
     // Home page
     'home' => [
-        'headline' => 'tuxed and free',
+        'headline'        => 'tuxed and free',
+        'subtitle'        => 'Android apps and scalable web solutions',
+        'ecodes_card_desc' => 'Scan food barcodes and discover the additives in products.',
     ],
 
-    // Contact page
-    'contact' => [
-        'title'         => 'Contact',
-        'email_title'   => 'Email',
-        'email_text'    => 'For any questions, bug reports, support requests or collaboration proposals:',
-        'support_title' => 'App support',
-        'support_text'  => 'For specific issues with Android apps, please include in your message:',
-        'support_items' => [
-            'App name and version',
-            'Device model and Android version',
-            'Problem description',
-        ],
-        'github_title'  => 'GitHub',
+    // Whoami + Contact
+    'whoami' => [
+        'title'         => 'whoami',
+        'p1'            => 'Android, backend and automations. Web services &amp; Open Source.',
+        'p2'            => 'Custom solution development.',
+        'contact_title' => 'Contact',
+        'contact_text'  => 'For any questions, bug reports, support requests or collaboration proposals:',
+        'support_text'  => 'For specific issues with Android apps, please include in your message the app name and version, your device model, Android version and a description of the problem.',
         'github_text'   => 'Some projects are open source. For bug reports and contributions:',
     ],
 
@@ -117,7 +114,7 @@ return [
         'feature_nutri'    => 'Nutri-Score & NOVA',
         'feature_nutri_desc' => 'View nutritional scores and the degree of processing of products.',
         'feature_lang'     => 'Multilingual',
-        'feature_lang_desc' => 'Interface in Italian and English, with allergen detection in both languages.',
+        'feature_lang_desc' => 'Interface and allergen detection available in multiple languages.',
 
         // Screenshots
         'screenshots_title' => 'Screenshots',

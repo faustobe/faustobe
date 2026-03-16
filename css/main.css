@@ -237,6 +237,14 @@ footer a:hover {
    ========================================================================== */
 
 @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .app-card {
+        max-width: 100%;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -275,6 +283,147 @@ footer a:hover {
 @media (max-width: 480px) {
     .logo {
         font-size: 1.35rem;
+    }
+}
+
+/* ==========================================================================
+   HOME — HERO
+   ========================================================================== */
+
+.hero {
+    text-align: center;
+    padding: 4rem 0 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.hero .subtitle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   HOME — APP CARDS
+   ========================================================================== */
+
+.app-cards {
+    padding: 2rem 0;
+}
+
+.app-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s, transform 0.2s;
+    max-width: 520px;
+}
+
+.app-card:hover,
+.app-card:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+    color: inherit;
+}
+
+.app-card-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    flex-shrink: 0;
+}
+
+.app-card-body h2 {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.app-card-body p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ==========================================================================
+   WHOAMI
+   ========================================================================== */
+
+.whoami-page {
+    max-width: 800px;
+}
+
+.whoami-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.whoami-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.whoami-header h1 {
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+
+.whoami-body p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.whoami-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2.5rem 0;
+}
+
+.whoami-contact h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.whoami-contact p {
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.whoami-contact .contact-email {
+    font-size: 1.2rem;
+}
+
+.whoami-contact .contact-email a {
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .whoami-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .whoami-photo {
+        width: 80px;
+        height: 80px;
     }
 }
 

@@ -7,7 +7,7 @@
 // Determine meta title and description based on route
 $metaKeys = [
     ''                    => ['home_title', 'home_description'],
-    'contact'             => ['contact_title', 'contact_description'],
+    'whoami'              => ['whoami_title', 'whoami_description'],
     'privacy-policy'      => ['privacy_title', 'privacy_description'],
     'works'               => ['works_title', 'works_description'],
     'apps/ecodes'         => ['ecodes_title', 'ecodes_description'],
@@ -48,9 +48,9 @@ $pageDescription = t('meta.' . $metaKey[1]);
         <ul class="nav-links">
             <li><a href="<?= url() ?>"<?= activeClass('') ?>><?= t('nav.home') ?></a></li>
             <li><a href="<?= url('apps/ecodes') ?>"<?= activeClass('apps/ecodes') ?>><?= t('nav.ecodes') ?></a></li>
-            <li><a href="<?= url('apps/santibailor') ?>"<?= activeClass('apps/santibailor') ?>><?= t('nav.santibailor') ?></a></li>
-            <li><a href="<?= url('apps/drop') ?>"<?= activeClass('apps/drop') ?>><?= t('nav.drop') ?></a></li>
-            <li><a href="<?= url('works') ?>"<?= activeClass('works') ?>><?= t('nav.works') ?></a></li>
+            <!-- <li><a href="<?= url('apps/santibailor') ?>"<?= activeClass('apps/santibailor') ?>><?= t('nav.santibailor') ?></a></li> -->
+            <!-- <li><a href="<?= url('apps/drop') ?>"<?= activeClass('apps/drop') ?>><?= t('nav.drop') ?></a></li> -->
+            <!-- <li><a href="<?= url('works') ?>"<?= activeClass('works') ?>><?= t('nav.works') ?></a></li> -->
         </ul>
 
         <div class="lang-switcher">
