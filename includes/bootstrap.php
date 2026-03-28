@@ -12,6 +12,12 @@ $currentLang = isset($_GET['lang']) && isset($SUPPORTED_LANGUAGES[$_GET['lang']]
 $rawRoute = $_GET['route'] ?? '';
 $currentRoute = normalizeRoute($rawRoute);
 
+// Handle legacy redirects (301 permanent)
+if (isset($REDIRECTS[$currentRoute])) {
+    header('Location: ' . langUrl($currentLang, $REDIRECTS[$currentRoute]), true, 301);
+    exit;
+}
+
 // Validate route exists
 if (!isset($ROUTES[$currentRoute])) {
     http_response_code(404);

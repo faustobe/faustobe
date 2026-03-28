@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Come usare l'app per fare la spesa consapevole | Guida | faustobe.it</title>
+  <meta name="description" content="Impara a usare l'app per riconoscere cibi ultra-processati, leggere gli additivi e fare scelte più naturali al supermercato. Guida pratica in 4 passi." />
+  <meta name="author" content="faustobe.it" />
+
+  <!-- =====================================================
+       FONT
+       ===================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =====================================================
+       CSS VARIABLES — modifica qui per adattare al tema
+       del sito
+       ===================================================== */
+    :root {
+      --color-bg:          #f8f5f0;
+      --color-surface:     #ffffff;
+      --color-text:        #1c1a17;
+      --color-text-muted:  #6b6460;
+      --color-accent:      #3a6b35;       /* verde salute */
+      --color-accent-soft: #e8f0e7;
+      --color-warn:        #c97d2e;
+      --color-warn-soft:   #fdf3e3;
+      --color-danger:      #b03a2e;
+      --color-danger-soft: #fdecea;
+      --color-border:      #e2dbd3;
+      --color-tag-bg:      #f0ece6;
+
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+
+      --radius-sm:  6px;
+      --radius-md:  12px;
+      --radius-lg:  20px;
+
+      --max-content: 760px;
+      --max-wide:    1100px;
+    }
+
+    /* =====================================================
+       RESET & BASE
+       ===================================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { opacity: .75; }
+
+    /* =====================================================
+       LAYOUT — BREADCRUMB
+       ===================================================== -->
+    <!-- SECTION: breadcrumb -->
+       ===================================================== */
+    .breadcrumb {
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 20px 24px 0;
+      font-size: 13px;
+      color: var(--color-text-muted);
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--color-text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--color-accent); }
+    .breadcrumb span { opacity: .5; }
+
+    /* =====================================================
+       SECTION: hero
+       ===================================================== */
+    .hero {
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 48px 24px 40px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: end;
+    }
+
+    .hero__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--color-accent-soft);
+      color: var(--color-accent);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+
+    .hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-text);
+      max-width: 600px;
+    }
+
+    .hero__lead {
+      margin-top: 16px;
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--color-text-muted);
+      max-width: 560px;
+    }
+
+    .hero__meta {
+      display: flex;
+      gap: 24px;
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--color-text-muted);
+    }
+
+    .hero__aside {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 20px 22px;
+      min-width: 200px;
+      font-size: 13px;
+    }
+
+    .hero__aside strong {
+      display: block;
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: 10px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .toc-list a {
+      color: var(--color-text);
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 13px;
+      transition: color .15s;
+    }
+    .toc-list a:hover { color: var(--color-accent); }
+    .toc-list .toc-num {
+      font-size: 11px;
+      color: var(--color-accent);
+      font-weight: 600;
+      min-width: 14px;
+    }
+
+    /* =====================================================
+       SECTION: main content wrapper
+       ===================================================== */
+    .content-wrapper {
+      max-width: var(--max-content);
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: 48px 0;
+    }
+
+    /* =====================================================
+       SECTION: step sections
+       ===================================================== */
+    .guide-section {
+      margin-bottom: 56px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .section-number {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .guide-section p {
+      margin-bottom: 16px;
+      color: var(--color-text);
+    }
+
+    /* =====================================================
+       SECTION: checklist items
+       ===================================================== */
+    .checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .checklist li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+    }
+
+    .checklist__icon {
+      font-size: 20px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .checklist__body strong {
+      display: block;
+      margin-bottom: 3px;
+      font-weight: 500;
+    }
+
+    .checklist__body p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--color-text-muted);
+    }
+
+    /* =====================================================
+       SECTION: alert / callout cards
+       ===================================================== */
+    .signal-cards {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0;
+    }
+
+    .signal-card {
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      border-left: 4px solid transparent;
+    }
+
+    .signal-card--ok {
+      background: var(--color-accent-soft);
+      border-left-color: var(--color-accent);
+    }
+    .signal-card--warn {
+      background: var(--color-warn-soft);
+      border-left-color: var(--color-warn);
+    }
+    .signal-card--danger {
+      background: var(--color-danger-soft);
+      border-left-color: var(--color-danger);
+    }
+
+    .signal-card__emoji { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+
+    .signal-card__content strong {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .signal-card__content p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--color-text-muted);
+    }
+
+    /* =====================================================
+       SECTION: traffic light (semaforo) rating blocks
+       ===================================================== */
+    .rating-grid {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0;
+    }
+
+    .rating-block {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      display: grid;
+      grid-template-columns: 56px 1fr;
+    }
+
+    .rating-block__dot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .rating-block--green .rating-block__dot { background: #d4edda; }
+    .rating-block--yellow .rating-block__dot { background: #fff3cd; }
+    .rating-block--red    .rating-block__dot { background: #f8d7da; }
+
+    .rating-block__body {
+      padding: 14px 18px;
+      background: var(--color-surface);
+    }
+
+    .rating-block__body strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .rating-block__body ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 14px;
+      color: var(--color-text-muted);
+    }
+
+    /* =====================================================
+       SECTION: numbered step list (practical guide)
+       ===================================================== */
+    .step-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 24px 0;
+      counter-reset: steps;
+    }
+
+    .step-list li {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid var(--color-accent);
+      color: var(--color-accent);
+      font-weight: 700;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-body strong {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .step-body p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--color-text-muted);
+    }
+
+    /* =====================================================
+       SECTION: summary table
+       ===================================================== */
+    .guide-table-wrap {
+      overflow-x: auto;
+      margin: 24px 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      background: var(--color-surface);
+    }
+
+    thead th {
+      text-align: left;
+      padding: 14px 18px;
+      font-size: 12px;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      background: var(--color-tag-bg);
+      font-weight: 500;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    tbody td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--color-border);
+      vertical-align: top;
+    }
+
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: var(--color-bg); }
+
+    /* =====================================================
+       SECTION: blockquote / insight box
+       ===================================================== */
+    .insight {
+      border-left: 3px solid var(--color-accent);
+      padding: 14px 20px;
+      background: var(--color-accent-soft);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--color-text-muted);
+      font-size: 15px;
+    }
+
+    /* =====================================================
+       SECTION: CTA banner
+       ===================================================== */
+    .cta-banner {
+      background: var(--color-accent);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 40px 40px;
+      margin-top: 56px;
+      text-align: center;
+    }
+
+    .cta-banner h2 {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .cta-banner p {
+      font-size: 16px;
+      opacity: .85;
+      margin-bottom: 24px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 99px;
+      font-weight: 500;
+      font-size: 15px;
+      text-decoration: none;
+      transition: transform .15s, opacity .15s;
+    }
+
+    .btn:hover { transform: translateY(-2px); opacity: .9; }
+
+    .btn--white {
+      background: #fff;
+      color: var(--color-accent);
+    }
+
+    /* =====================================================
+       SECTION: related guides nav
+       ===================================================== */
+    .related-guides {
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .related-guides h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .related-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      text-decoration: none;
+      color: var(--color-text);
+      transition: border-color .15s, transform .15s;
+      display: block;
+    }
+
+    .related-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-2px);
+    }
+
+    .related-card__tag {
+      font-size: 11px;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .related-card__title {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+    @media (max-width: 700px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 32px;
+      }
+      .hero__aside { display: none; }
+      .cta-banner { padding: 32px 24px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SECTION: breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">faustobe.it</a>
+    <span>›</span>
+    <a href="/guide/">Guide</a>
+    <span>›</span>
+    <span>Come usare l'app</span>
+  </nav>
+
+  <!-- SECTION: hero -->
+  <header class="hero">
+    <div class="hero__text">
+      <div class="hero__tag">
+        <span>📖</span> Guida all'app
+      </div>
+      <h1 class="hero__title">Come usare l'app per fare la spesa in modo più consapevole</h1>
+      <p class="hero__lead">
+        Impara a riconoscere i cibi più lavorati e scegliere quelli davvero semplici e naturali — in pochi minuti, senza diventare un esperto di additivi.
+      </p>
+      <div class="hero__meta">
+        <span>⏱ Lettura: 5 min</span>
+        <span>🎯 Livello: principiante</span>
+      </div>
+    </div>
+
+    <!-- Indice laterale (desktop) -->
+    <aside class="hero__aside" aria-label="Indice della guida">
+      <strong>In questa guida</strong>
+      <ol class="toc-list">
+        <li>
+          <a href="#tre-controlli">
+            <span class="toc-num">1</span>
+            Tre controlli rapidi
+          </a>
+        </li>
+        <li>
+          <a href="#regole-semplici">
+            <span class="toc-num">2</span>
+            Segnali di ultra-lavorazione
+          </a>
+        </li>
+        <li>
+          <a href="#interpretare-risultato">
+            <span class="toc-num">3</span>
+            Interpretare il risultato
+          </a>
+        </li>
+        <li>
+          <a href="#guida-pratica">
+            <span class="toc-num">4</span>
+            Guida pratica in spesa
+          </a>
+        </li>
+        <li>
+          <a href="#riepilogo">
+            <span class="toc-num">5</span>
+            Tabella riepilogativa
+          </a>
+        </li>
+        <li>
+          <a href="#perche-conta">
+            <span class="toc-num">6</span>
+            Perché conta davvero
+          </a>
+        </li>
+      </ol>
+    </aside>
+  </header>
+
+  <!-- SECTION: main content -->
+  <main class="content-wrapper">
+
+    <hr class="divider" />
+
+    <!-- -----------------------------------------------
+         STEP 1: Tre controlli rapidi
+         ----------------------------------------------- -->
+    <section id="tre-controlli" class="guide-section">
+      <div class="section-header">
+        <div class="section-number" aria-hidden="true">1</div>
+        <h2 class="section-title">Prima di scansionare, fai tre controlli rapidi</h2>
+      </div>
+
+      <p>
+        Prima ancora di aprire l'app, osserva la confezione. Le etichette frontali sono spesso pensate per sembrare più sani di quello che sono.
+      </p>
+
+      <ul class="checklist">
+        <li>
+          <span class="checklist__icon">👁️</span>
+          <div class="checklist__body">
+            <strong>Guarda il fronte della confezione</strong>
+            <p>Fai attenzione ai claim come "senza zucchero ma con dolcificanti", "senza grassi ma con emulsionanti", "gusto extra" o "aromatizzato". Spesso indicano che il prodotto è stato molto modificato.</p>
+          </div>
+        </li>
+        <li>
+          <span class="checklist__icon">📱</span>
+          <div class="checklist__body">
+            <strong>Apri l'app e scansiona il prodotto</strong>
+            <p>Usa la fotocamera per scansionare il codice a barre o carica una foto dell'etichetta. L'app ti mostrerà subito la lista degli ingredienti e degli additivi.</p>
+          </div>
+        </li>
+        <li>
+          <span class="checklist__icon">🔍</span>
+          <div class="checklist__body">
+            <strong>Controlla tre punti chiave</strong>
+            <p>Quanti <strong>additivi</strong> compaiono (soprattutto i codici E)? Quanto è <strong>lunga e complessa</strong> la lista ingredienti? Quanti <strong>zuccheri, sale e grassi</strong> sono dichiarati?</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="insight">
+        Se rispondi "molti" o "lunga/complicata" a più di una domanda, ti trovi probabilmente davanti a un cibo molto lavorato.
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- -----------------------------------------------
+         STEP 2: Segnali di ultra-lavorazione
+         ----------------------------------------------- -->
+    <section id="regole-semplici" class="guide-section">
+      <div class="section-header">
+        <div class="section-number" aria-hidden="true">2</div>
+        <h2 class="section-title">Tre regole per capire subito se un cibo è "troppo lavorato"</h2>
+      </div>
+
+      <p>
+        Puoi applicare queste tre regole ogni volta che controlli un prodotto nell'app — non servono conoscenze particolari.
+      </p>
+
+      <div class="signal-cards">
+        <div class="signal-card signal-card--ok">
+          <span class="signal-card__emoji">✅</span>
+          <div class="signal-card__content">
+            <strong>Pochi ingredienti = meglio</strong>
+            <p>Se la lista è breve e contiene nomi familiari (es. "farina, acqua, sale, olio"), il prodotto è poco lavorato e in genere più affidabile.</p>
+          </div>
+        </div>
+        <div class="signal-card signal-card--danger">
+          <span class="signal-card__emoji">🚩</span>
+          <div class="signal-card__content">
+            <strong>Molti ingredienti "impronunciabili"</strong>
+            <p>Termini come "amidi modificati", "proteine isolate", "mono‑ e digliceridi degli acidi grassi", "esaltatori di sapidità" o "aromi complessi" indicano chiaramente un alimento molto processato.</p>
+          </div>
+        </div>
+        <div class="signal-card signal-card--danger">
+          <span class="signal-card__emoji">🚩</span>
+          <div class="signal-card__content">
+            <strong>Tanti codici E e additivi</strong>
+            <p>Non tutti gli E sono pericolosi, ma la loro presenza in massa — coloranti, conservanti, stabilizzanti, emulsionanti — indica un grado elevato di trasformazione industriale.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- -----------------------------------------------
+         STEP 3: Interpretare il risultato
+         ----------------------------------------------- -->
+    <section id="interpretare-risultato" class="guide-section">
+      <div class="section-header">
+        <div class="section-number" aria-hidden="true">3</div>
+        <h2 class="section-title">Come interpretare il risultato dell'app</h2>
+      </div>
+
+      <p>
+        Ogni prodotto riceve una <strong>valutazione rapida</strong> — pensa a questi colori come a un semaforo alimentare.
+      </p>
+
+      <div class="rating-grid">
+        <div class="rating-block rating-block--green">
+          <div class="rating-block__dot">🟢</div>
+          <div class="rating-block__body">
+            <strong>Poco lavorato — via libera</strong>
+            <ul>
+              <li>Pochi ingredienti, pochi o nessun additivo E</li>
+              <li>Zuccheri e sale moderati</li>
+              <li>Ottimo candidato per la spesa quotidiana</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rating-block rating-block--yellow">
+          <div class="rating-block__dot">🟡</div>
+          <div class="rating-block__body">
+            <strong>Moderatamente lavorato — usalo con moderazione</strong>
+            <ul>
+              <li>Alcuni E, aromi naturali o zuccheri extra</li>
+              <li>Non in quantità eccessive</li>
+              <li>Va bene ogni tanto, non come base di ogni pasto</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rating-block rating-block--red">
+          <div class="rating-block__dot">🔴</div>
+          <div class="rating-block__body">
+            <strong>Ultra-processato — limita o evita</strong>
+            <ul>
+              <li>Molti additivi, zuccheri extra, aromi complessi</li>
+              <li>Grassi di origine industriale</li>
+              <li>Meglio tenerlo come vera eccezione, specialmente per i bambini</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- -----------------------------------------------
+         STEP 4: Guida pratica in spesa
+         ----------------------------------------------- -->
+    <section id="guida-pratica" class="guide-section">
+      <div class="section-header">
+        <div class="section-number" aria-hidden="true">4</div>
+        <h2 class="section-title">Come usare l'app in modo pratico in spesa</h2>
+      </div>
+
+      <p>
+        Integrare l'app nella routine di spesa è più semplice di quanto sembra. Segui questi quattro passi la prima volta: diventeranno un'abitudine naturale.
+      </p>
+
+      <ol class="step-list">
+        <li>
+          <span class="step-num">1</span>
+          <div class="step-body">
+            <strong>Inizia dal reparto frigo e colazione</strong>
+            <p>Scansiona yogurt, pane, latte, bevande. Cerca prodotti con pochi ingredienti, pochi E, e zuccheri semplici (frutta, latte, zucchero di canna) invece di sciroppi e dolcificanti.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <div class="step-body">
+            <strong>Poi spostati ai dolci e snack</strong>
+            <p>Controlla merendine, snack salati, biscotti, dolci confezionati. Se la lista è lunghissima e piena di E, l'app segnalerà rosso. In quei casi, scegli sempre l'alternativa più semplice (frutta, pane integrale, noci).</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <div class="step-body">
+            <strong>Usa l'app per confrontare prodotti simili</strong>
+            <p>Cerca due prodotti dello stesso tipo (es. yogurt greco, pane, snack) e confronta le schede nell'app. Spesso quello con meno ingredienti è solo leggermente meno appariscente sullo scaffale, ma molto più naturale.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">4</span>
+          <div class="step-body">
+            <strong>Lascia i "rossi" come eccezione, non come regola</strong>
+            <p>Non serve eliminare tutto ciò che è ultra-processato: basta ridurlo. Deciditi una soglia — ad esempio, massimo 1–2 prodotti "rossi" alla settimana — mentre il resto della spesa sia fatto di cibi semplici.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- -----------------------------------------------
+         STEP 5: Tabella riepilogativa
+         ----------------------------------------------- -->
+    <section id="riepilogo" class="guide-section">
+      <div class="section-header">
+        <div class="section-number" aria-hidden="true">5</div>
+        <h2 class="section-title">Tabella riepilogativa</h2>
+      </div>
+
+      <p>Un colpo d'occhio su come tradurre il risultato dell'app in azioni concrete.</p>
+
+      <div class="guide-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Situazione nell'app</th>
+              <th>Cosa fare in pratica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>🟢 Pochi ingredienti, pochi/no E</td>
+              <td>Preferisci questo prodotto come base quotidiana (es. yogurt semplice, pane integrale, passata di pomodoro).</td>
+            </tr>
+            <tr>
+              <td>🟡 Alcuni E, zuccheri moderati</td>
+              <td>Usalo ogni tanto, non come alimento principale.</td>
+            </tr>
+            <tr>
+              <td>🔴 Tanti E, zuccheri extra, aromi complessi</td>
+              <td>Limita o evita: è un cibo molto processato, meglio usarlo solo come eccezione.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- -----------------------------------------------
+         STEP 6: Perché conta davvero
+         ----------------------------------------------- -->
+    <section id="perche-conta" class="guide-section">
+      <div class="section-header">
+        <div class="section-number" aria-hidden="true">6</div>
+        <h2 class="section-title">Perché imparare a leggere gli additivi fa davvero la differenza</h2>
+      </div>
+
+      <p>
+        Riconoscere i cibi più lavorati non è "fobia degli additivi": è <strong>attenzione alla qualità di quello che mangiamo</strong>. Molti studi suggeriscono che ridurre i cibi ultra-processati aiuta sul lungo periodo il controllo del peso, la salute cardiovascolare e la stabilità del metabolismo.
+      </p>
+
+      <p>
+        L'app ti dà uno strumento concreto: non serve ricordare ogni codice E, basta imparare a riconoscere i <strong>segnali di troppa trasformazione</strong> e affidarsi alla valutazione rapida.
+      </p>
+
+      <div class="insight">
+        Pensa all'app come a un <strong>assistente di spesa intelligente</strong>: ti guida verso scelte più semplici, senza dover leggere decine di etichette in modo ossessivo.
+      </div>
+
+      <p>
+        Vuoi approfondire il tema degli alimenti ultra-processati e capire la differenza tra additivi e cibi NOVA 4?
+        <a href="/guide/additivi-vs-ultraprocessati/">Leggi la guida su additivi vs cibi ultra-processati →</a>
+      </p>
+    </section>
+
+    <!-- -----------------------------------------------
+         CTA banner
+         ----------------------------------------------- -->
+    <div class="cta-banner">
+      <h2>Pronto a fare la spesa in modo più consapevole?</h2>
+      <p>Scarica l'app e prova subito a scansionare 3–4 prodotti che compri di solito: ti stupirai di quanto cambia il modo di vedere la spesa.</p>
+      <!-- SECTION: cta-button — aggiorna l'href con il link Play Store -->
+      <a href="#" class="btn btn--white">Scarica l'app su Google Play →</a>
+    </div>
+
+    <!-- -----------------------------------------------
+         Related guides
+         ----------------------------------------------- -->
+    <nav class="related-guides" aria-label="Guide correlate">
+      <h3>Continua a leggere</h3>
+      <div class="related-grid">
+        <!-- SECTION: related-guides — aggiorna href e titoli man mano che crei le guide -->
+        <a href="/guide/additivi-vs-ultraprocessati/" class="related-card">
+          <div class="related-card__tag">Approfondimento</div>
+          <div class="related-card__title">Additivi vs cibi ultra-processati: qual è la vera differenza?</div>
+        </a>
+        <a href="/guide/classificazione-nova/" class="related-card">
+          <div class="related-card__tag">Classificazione</div>
+          <div class="related-card__title">Cos'è la classificazione NOVA e perché è importante</div>
+        </a>
+        <a href="/guide/ingredienti-pericolosi/" class="related-card">
+          <div class="related-card__tag">Sicurezza alimentare</div>
+          <div class="related-card__title">Ingredienti da evitare: la lista degli additivi più controversi</div>
+        </a>
+        <a href="/guide/cibi-consigliati/" class="related-card">
+          <div class="related-card__tag">Consigli pratici</div>
+          <div class="related-card__title">I cibi più semplici e naturali da mettere nel carrello</div>
+        </a>
+      </div>
+    </nav>
+
+  </main>
+
+</body>
+</html>

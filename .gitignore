@@ -1,3 +1,6 @@
 .qodo/
 .claude/
 *.apk
+docs/
+CLAUDE.md
+SKILL.md
