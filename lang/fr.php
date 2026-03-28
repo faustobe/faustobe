@@ -156,6 +156,17 @@ return [
         // Links
         'privacy_link'  => 'Politique de confidentialit&eacute;',
         'contact_link'  => 'Contact',
+
+        // Guides chips
+        'guides_section_title' => 'Guides utiles',
+        'guide_come_usare'     => 'Comment l\'utiliser',
+        'guide_etichetta'      => '&Eacute;tiquettes',
+        'guide_additivi'       => 'Additifs',
+        'guide_nova'           => 'NOVA',
+        'guide_ingredienti'    => 'Ingr&eacute;dients',
+        'guide_cibi'           => 'Alimentation',
+        'guide_upf'            => 'Ultra-transform&eacute;s',
+        'guide_bambini'        => 'Enfants &amp; seniors',
     ],
 
     // E-Codes Privacy

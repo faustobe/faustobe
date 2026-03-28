@@ -89,6 +89,45 @@
         </div>
     </section>
 
+    <!-- Guides Section -->
+    <section class="app-guides">
+        <h2><?= t('ecodes.guides_section_title') ?></h2>
+        <div class="app-guides-row">
+            <a href="<?= url('guides/come-usare-ecodes') ?>" class="app-guide-chip">
+                <span class="app-guide-chip__icon">📱</span>
+                <span class="app-guide-chip__label"><?= t('ecodes.guide_come_usare') ?></span>
+            </a>
+            <a href="<?= url('guides/leggere-etichetta-nutrizionale') ?>" class="app-guide-chip">
+                <span class="app-guide-chip__icon">🏷️</span>
+                <span class="app-guide-chip__label"><?= t('ecodes.guide_etichetta') ?></span>
+            </a>
+            <a href="<?= url('guides/additivi-vs-ultraprocessati') ?>" class="app-guide-chip">
+                <span class="app-guide-chip__icon">🧪</span>
+                <span class="app-guide-chip__label"><?= t('ecodes.guide_additivi') ?></span>
+            </a>
+            <a href="<?= url('guides/classificazione-nova') ?>" class="app-guide-chip">
+                <span class="app-guide-chip__icon">📊</span>
+                <span class="app-guide-chip__label"><?= t('ecodes.guide_nova') ?></span>
+            </a>
+            <a href="<?= url('guides/ingredienti-pericolosi') ?>" class="app-guide-chip">
+                <span class="app-guide-chip__icon">⚠️</span>
+                <span class="app-guide-chip__label"><?= t('ecodes.guide_ingredienti') ?></span>
+            </a>
+            <a href="<?= url('guides/cibi-consigliati') ?>" class="app-guide-chip">
+                <span class="app-guide-chip__icon">🥦</span>
+                <span class="app-guide-chip__label"><?= t('ecodes.guide_cibi') ?></span>
+            </a>
+            <a href="<?= url('guides/rischi-alimenti-ultraprocessati') ?>" class="app-guide-chip">
+                <span class="app-guide-chip__icon">🔬</span>
+                <span class="app-guide-chip__label"><?= t('ecodes.guide_upf') ?></span>
+            </a>
+            <a href="<?= url('guides/sicurezza-alimentare-bambini-e-anziani') ?>" class="app-guide-chip">
+                <span class="app-guide-chip__icon">👶</span>
+                <span class="app-guide-chip__label"><?= t('ecodes.guide_bambini') ?></span>
+            </a>
+        </div>
+    </section>
+
     <!-- Links Section -->
     <section class="app-links">
         <a href="<?= url('apps/ecodes/privacy') ?>"><?= t('ecodes.privacy_link') ?></a>
