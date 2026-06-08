@@ -1,17 +1,17 @@
-<main class="whoami-page">
-    <div class="whoami-header">
-        <img src="<?= asset('/assets/cyb-nana.png') ?>" alt="faustobe" class="whoami-photo" />
+<main class="content-page">
+    <div class="page-header">
+        <img src="<?= asset('/assets/cyb-nana.png') ?>" alt="faustobe" class="page-photo" />
         <h1><?= t('whoami.title') ?></h1>
     </div>
 
-    <div class="whoami-body">
+    <div class="page-body">
         <p><?= t('whoami.p1') ?></p>
         <p><?= t('whoami.p2') ?></p>
     </div>
 
-    <hr class="whoami-divider" />
+    <hr class="page-divider" />
 
-    <section class="whoami-contact">
+    <section class="page-contact">
         <h2><?= t('whoami.contact_title') ?></h2>
         <p><?= t('whoami.contact_text') ?></p>
         <p class="contact-email">

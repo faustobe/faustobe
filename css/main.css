@@ -358,70 +358,70 @@ footer a:hover {
 }
 
 /* ==========================================================================
-   WHOAMI
+   PAGINE CONTENUTO (whoami, servizi, ...)
    ========================================================================== */
 
-.whoami-page {
+.content-page {
     max-width: 800px;
 }
 
-.whoami-header {
+.page-header {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
 
-.whoami-photo {
+.page-photo {
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.whoami-header h1 {
+.page-header h1 {
     font-size: 2rem;
     color: var(--text-primary);
 }
 
-.whoami-body p {
+.page-body p {
     color: var(--text-secondary);
     margin-bottom: 1rem;
     line-height: 1.7;
 }
 
-.whoami-divider {
+.page-divider {
     border: none;
     border-top: 1px solid var(--border);
     margin: 2.5rem 0;
 }
 
-.whoami-contact h2 {
+.page-contact h2 {
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
     color: var(--text-primary);
 }
 
-.whoami-contact p {
+.page-contact p {
     color: var(--text-secondary);
     margin-bottom: 0.75rem;
 }
 
-.whoami-contact .contact-email {
+.page-contact .contact-email {
     font-size: 1.2rem;
 }
 
-.whoami-contact .contact-email a {
+.page-contact .contact-email a {
     font-weight: 500;
 }
 
 @media (max-width: 768px) {
-    .whoami-header {
+    .page-header {
         flex-direction: column;
         text-align: center;
     }
 
-    .whoami-photo {
+    .page-photo {
         width: 80px;
         height: 80px;
     }

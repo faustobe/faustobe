@@ -38,6 +38,7 @@ $ROUTES = [
     'guides/cibi-consigliati'                       => 'guides/cibi-consigliati.php',
     'guides/sicurezza-alimentare-bambini-e-anziani' => 'guides/sicurezza-alimentare-bambini-e-anziani.php',
     'guides/rischi-alimenti-ultraprocessati'        => 'guides/rischi-alimenti-ultraprocessati.php',
+    'servizi'                                       => 'servizi.php',
 ];
 
 // Page-specific CSS files (route => additional CSS)

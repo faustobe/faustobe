@@ -12,6 +12,7 @@ return [
         'drop'        => 'drop',
         'works'       => 'works',
         'guides'      => 'Guides',
+        'servizi'     => 'services',
     ],
 
     // Footer
@@ -57,6 +58,8 @@ return [
         'guides_sicurezza_bambini_description' => 'Additifs et ingr&eacute;dients &agrave; &eacute;viter pour les plus vuln&eacute;rables : guide pratique pour des achats s&ucirc;rs pour les familles avec enfants et personnes &acirc;g&eacute;es.',
         'guides_rischi_upf_title'              => 'Pourquoi les aliments ultra-transform&eacute;s sont mauvais pour la sant&eacute; | Guides | faustobe',
         'guides_rischi_upf_description'        => 'Ob&eacute;sit&eacute;, inflammation, dysbiose intestinale : ce que dit la recherche sur les risques des ultra-transform&eacute;s et comment les r&eacute;duire au quotidien.',
+        'servizi_title'       => 'Services - faustobe',
+        'servizi_description' => 'D&eacute;veloppement web, apps Android et documents LaTeX sur mesure.',
     ],
 
     // Home page
@@ -357,6 +360,18 @@ return [
         'coming_soon'      => 'Bient&ocirc;t disponible',
         'coming_soon_desc' => 'Nouveaux guides sur les additifs, la classification NOVA et bien plus encore.',
         'in_arrivo'        => 'Bient&ocirc;t',
+    ],
+
+    // Services
+    'servizi' => [
+        'title'          => 'services',
+        'web_title'      => 'D&eacute;veloppement web et applications de gestion',
+        'web_text'       => 'Sites web et applications de gestion personnalis&eacute;s pour les petites et moyennes entreprises. Backend, bases de donn&eacute;es, panneaux d\'administration. D&eacute;veloppement sur mesure selon les besoins sp&eacute;cifiques du projet.',
+        'android_title'  => 'Apps Android',
+        'android_text'   => 'D&eacute;veloppement d\'applications Android natives, de l\'id&eacute;e &agrave; la publication sur Google Play ou pour usage interne/professionnel. Cycle complet : conception, d&eacute;veloppement, tests, distribution. Convient aussi bien aux apps publiques qu\'aux outils personnalis&eacute;s &agrave; usage priv&eacute; ou professionnel.',
+        'latex_title'    => 'Documents et ebooks en LaTeX',
+        'latex_text'     => 'Production de PDFs professionnels, ebooks, documentation technique et publications en LaTeX. Adapt&eacute; aux manuels d\'entreprise, th&egrave;ses, publications acad&eacute;miques et catalogues techniques.',
+        'contact_text'   => 'Pour devis et collaborations :',
     ],
 
 ];

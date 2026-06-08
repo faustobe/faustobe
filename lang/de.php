@@ -12,6 +12,7 @@ return [
         'drop'        => 'drop',
         'works'       => 'works',
         'guides'      => 'Ratgeber',
+        'servizi'     => 'Dienste',
     ],
 
     // Footer
@@ -57,6 +58,8 @@ return [
         'guides_sicurezza_bambini_description' => 'Zusatzstoffe und Zutaten, die f&uuml;r die Verletzlichsten zu vermeiden sind: praktischer Leitfaden f&uuml;r sicheres Einkaufen f&uuml;r Familien mit Kindern und &auml;lteren Menschen.',
         'guides_rischi_upf_title'              => 'Warum ultra-verarbeitete Lebensmittel sch&auml;dlich sind | Ratgeber | faustobe',
         'guides_rischi_upf_description'        => 'Fettleibigkeit, Entz&uuml;ndungen, Darmdysbiose: Was die Forschung &uuml;ber die Risiken von Ultra-Verarbeitetem sagt und wie man sie in der t&auml;glichen Ern&auml;hrung reduziert.',
+        'servizi_title'       => 'Dienste - faustobe',
+        'servizi_description' => 'Ma&szlig;geschneiderte Webentwicklung, Android-Apps und LaTeX-Dokumente.',
     ],
 
     // Home page
@@ -357,6 +360,18 @@ return [
         'coming_soon'      => 'Demnächst',
         'coming_soon_desc' => 'Neue Ratgeber zu Zusatzstoffen, NOVA-Klassifikation und vielem mehr.',
         'in_arrivo'        => 'Demnächst',
+    ],
+
+    // Dienste
+    'servizi' => [
+        'title'          => 'Dienste',
+        'web_title'      => 'Webentwicklung und Verwaltungsanwendungen',
+        'web_text'       => 'Ma&szlig;geschneiderte Websites und Verwaltungsanwendungen f&uuml;r kleine und mittlere Unternehmen. Backend, Datenbanken, Administrationspanels. Individuelle Entwicklung nach den spezifischen Anforderungen des Projekts.',
+        'android_title'  => 'Android-Apps',
+        'android_text'   => 'Entwicklung nativer Android-Anwendungen, von der Idee bis zur Ver&ouml;ffentlichung auf Google Play oder f&uuml;r den internen/betrieblichen Einsatz. Vollst&auml;ndiger Zyklus: Konzeption, Entwicklung, Test, Verteilung. Geeignet f&uuml;r &ouml;ffentliche Apps ebenso wie f&uuml;r individuelle Werkzeuge f&uuml;r den privaten oder professionellen Einsatz.',
+        'latex_title'    => 'Dokumente und E-Books in LaTeX',
+        'latex_text'     => 'Erstellung professioneller PDFs, E-Books, technischer Dokumentationen und Publikationen in LaTeX. Geeignet f&uuml;r Unternehmenshandb&uuml;cher, Abschlussarbeiten, wissenschaftliche Ver&ouml;ffentlichungen und technische Kataloge.',
+        'contact_text'   => 'F&uuml;r Angebote und Kooperationen:',
     ],
 
 ];

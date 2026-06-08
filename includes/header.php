@@ -23,6 +23,7 @@ $metaKeys = [
     'guides/cibi-consigliati'                       => ['guides_cibi_title', 'guides_cibi_description'],
     'guides/sicurezza-alimentare-bambini-e-anziani' => ['guides_sicurezza_bambini_title', 'guides_sicurezza_bambini_description'],
     'guides/rischi-alimenti-ultraprocessati'        => ['guides_rischi_upf_title', 'guides_rischi_upf_description'],
+    'servizi'                                       => ['servizi_title', 'servizi_description'],
 ];
 
 $metaKey = $metaKeys[$currentRoute] ?? ['home_title', 'home_description'];
@@ -58,6 +59,7 @@ $pageDescription = t('meta.' . $metaKey[1]);
             <li><a href="<?= url() ?>"<?= activeClass('') ?>><?= t('nav.home') ?></a></li>
             <li><a href="<?= url('apps/ecodes') ?>"<?= activeClass('apps/ecodes') ?>><?= t('nav.ecodes') ?></a></li>
             <li><a href="<?= url('guides') ?>"<?= activeClass('guides') ?>><?= t('nav.guides') ?></a></li>
+            <li><a href="<?= url('servizi') ?>"<?= activeClass('servizi') ?>><?= t('nav.servizi') ?></a></li>
             <!-- <li><a href="<?= url('apps/santibailor') ?>"<?= activeClass('apps/santibailor') ?>><?= t('nav.santibailor') ?></a></li> -->
             <!-- <li><a href="<?= url('apps/drop') ?>"<?= activeClass('apps/drop') ?>><?= t('nav.drop') ?></a></li> -->
             <!-- <li><a href="<?= url('works') ?>"<?= activeClass('works') ?>><?= t('nav.works') ?></a></li> -->

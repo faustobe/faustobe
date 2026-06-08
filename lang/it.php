@@ -6,12 +6,13 @@ return [
 
     // Navigation
     'nav' => [
-        'home'        => 'Home',
+        'home'        => 'home',
         'ecodes'      => 'ecodes',
         'santibailor'  => 'santibailor',
         'drop'        => 'drop',
         'works'       => 'works',
-        'guides'      => 'Guide',
+        'guides'      => 'guide',
+        'servizi'     => 'servizi',
     ],
 
     // Footer
@@ -57,6 +58,8 @@ return [
         'guides_sicurezza_bambini_description' => 'Additivi e ingredienti da evitare per i più vulnerabili: guida pratica alla spesa sicura per bambini e anziani.',
         'guides_rischi_upf_title'              => 'Perché gli alimenti ultra-processati fanno male | Guide | faustobe',
         'guides_rischi_upf_description'        => 'Obesità, infiammazione, microbiota: cosa dice la ricerca sui rischi degli ultra-processati e come ridurli nella dieta quotidiana.',
+        'servizi_title'       => 'Servizi - faustobe',
+        'servizi_description' => 'Sviluppo web, app Android e documenti LaTeX su misura.',
     ],
 
     // Home page
@@ -357,6 +360,18 @@ return [
         'coming_soon'      => 'Prossimamente',
         'coming_soon_desc' => 'Nuove guide in arrivo su additivi, classificazione NOVA e molto altro.',
         'in_arrivo'        => 'In arrivo',
+    ],
+
+    // Servizi
+    'servizi' => [
+        'title'          => 'servizi',
+        'web_title'      => 'Sviluppo web e applicazioni gestionali',
+        'web_text'       => 'Siti web e applicazioni gestionali personalizzate per piccole e medie imprese. Backend, database, pannelli di amministrazione. Sviluppo su misura in base alle esigenze specifiche del progetto.',
+        'android_title'  => 'App Android',
+        'android_text'   => 'Sviluppo di applicazioni Android native, dall\'idea alla pubblicazione su Google Play o per uso interno/aziendale. Ciclo completo: progettazione, sviluppo, test, distribuzione. Adatto sia ad app pubbliche che a strumenti personalizzati per uso privato o professionale.',
+        'latex_title'    => 'Documenti e ebook in LaTeX',
+        'latex_text'     => 'Produzione di PDF professionali, ebook, documentazione tecnica e pubblicazioni in LaTeX. Adatto a manuali aziendali, tesi, pubblicazioni accademiche, cataloghi tecnici.',
+        'contact_text'   => 'Per preventivi e collaborazioni:',
     ],
 
 ];

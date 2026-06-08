@@ -6,12 +6,13 @@ return [
 
     // Navigation
     'nav' => [
-        'home'        => 'Home',
+        'home'        => 'home',
         'ecodes'      => 'ecodes',
         'santibailor'  => 'santibailor',
         'drop'        => 'drop',
         'works'       => 'works',
-        'guides'      => 'Guides',
+        'guides'      => 'guides',
+        'servizi'     => 'services',
     ],
 
     // Footer
@@ -57,6 +58,8 @@ return [
         'guides_sicurezza_bambini_description' => 'Additives and ingredients to avoid for the most vulnerable: a practical guide to safe shopping for families with children and elderly people.',
         'guides_rischi_upf_title'              => 'Why ultra-processed foods are bad for you | Guides | faustobe',
         'guides_rischi_upf_description'        => 'Obesity, inflammation, microbiome disruption: what research says about the risks of ultra-processed foods and how to reduce them in your daily diet.',
+        'servizi_title'       => 'Services - faustobe',
+        'servizi_description' => 'Custom web development, Android apps and LaTeX documents.',
     ],
 
     // Home page
@@ -357,6 +360,18 @@ return [
         'coming_soon'      => 'Coming soon',
         'coming_soon_desc' => 'New guides coming on additives, NOVA classification and much more.',
         'in_arrivo'        => 'Coming soon',
+    ],
+
+    // Services
+    'servizi' => [
+        'title'          => 'services',
+        'web_title'      => 'Web development and management applications',
+        'web_text'       => 'Custom websites and management applications for small and medium-sized businesses. Backend, databases, administration panels. Tailored development based on the specific needs of each project.',
+        'android_title'  => 'Android apps',
+        'android_text'   => 'Development of native Android applications, from idea to publication on Google Play or for internal/corporate use. Full cycle: design, development, testing, distribution. Suitable for both public apps and custom tools for private or professional use.',
+        'latex_title'    => 'Documents and ebooks in LaTeX',
+        'latex_text'     => 'Production of professional PDFs, ebooks, technical documentation and publications in LaTeX. Suitable for corporate manuals, theses, academic publications, technical catalogues.',
+        'contact_text'   => 'For quotes and collaborations:',
     ],
 
 ];

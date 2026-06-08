@@ -12,6 +12,7 @@ return [
         'drop'        => 'drop',
         'works'       => 'works',
         'guides'      => 'Gu&iacute;as',
+        'servizi'     => 'servicios',
     ],
 
     // Footer
@@ -57,6 +58,8 @@ return [
         'guides_sicurezza_bambini_description' => 'Aditivos e ingredientes que evitar para los m&aacute;s vulnerables: gu&iacute;a pr&aacute;ctica para comprar de forma segura para familias con ni&ntilde;os y personas mayores.',
         'guides_rischi_upf_title'              => 'Por qu&eacute; los alimentos ultraprocesados son malos para la salud | Gu&iacute;as | faustobe',
         'guides_rischi_upf_description'        => 'Obesidad, inflamaci&oacute;n, disbiosis intestinal: lo que dice la ciencia sobre los riesgos de los ultraprocesados y c&oacute;mo reducirlos en la dieta diaria.',
+        'servizi_title'       => 'Servicios - faustobe',
+        'servizi_description' => 'Desarrollo web, apps Android y documentos LaTeX a medida.',
     ],
 
     // Home page
@@ -357,6 +360,18 @@ return [
         'coming_soon'      => 'Pr&oacute;ximamente',
         'coming_soon_desc' => 'Nuevas gu&iacute;as sobre aditivos, clasificaci&oacute;n NOVA y mucho m&aacute;s.',
         'in_arrivo'        => 'Pr&oacute;ximamente',
+    ],
+
+    // Servicios
+    'servizi' => [
+        'title'          => 'servicios',
+        'web_title'      => 'Desarrollo web y aplicaciones de gesti&oacute;n',
+        'web_text'       => 'Sitios web y aplicaciones de gesti&oacute;n personalizadas para peque&ntilde;as y medianas empresas. Backend, bases de datos, paneles de administraci&oacute;n. Desarrollo a medida seg&uacute;n las necesidades espec&iacute;ficas del proyecto.',
+        'android_title'  => 'Apps Android',
+        'android_text'   => 'Desarrollo de aplicaciones Android nativas, desde la idea hasta la publicaci&oacute;n en Google Play o para uso interno/empresarial. Ciclo completo: dise&ntilde;o, desarrollo, pruebas, distribuci&oacute;n. Adecuado tanto para apps p&uacute;blicas como para herramientas personalizadas de uso privado o profesional.',
+        'latex_title'    => 'Documentos y ebooks en LaTeX',
+        'latex_text'     => 'Producci&oacute;n de PDFs profesionales, ebooks, documentaci&oacute;n t&eacute;cnica y publicaciones en LaTeX. Adecuado para manuales empresariales, tesis, publicaciones acad&eacute;micas y cat&aacute;logos t&eacute;cnicos.',
+        'contact_text'   => 'Para presupuestos y colaboraciones:',
     ],
 
 ];
