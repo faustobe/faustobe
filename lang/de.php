@@ -13,6 +13,7 @@ return [
         'works'       => 'works',
         'guides'      => 'Ratgeber',
         'servizi'     => 'Dienste',
+        'download'    => 'download',
     ],
 
     // Footer
@@ -60,6 +61,8 @@ return [
         'guides_rischi_upf_description'        => 'Fettleibigkeit, Entz&uuml;ndungen, Darmdysbiose: Was die Forschung &uuml;ber die Risiken von Ultra-Verarbeitetem sagt und wie man sie in der t&auml;glichen Ern&auml;hrung reduziert.',
         'servizi_title'       => 'Dienste - faustobe',
         'servizi_description' => 'Ma&szlig;geschneiderte Webentwicklung, Android-Apps und LaTeX-Dokumente.',
+        'download_title'       => 'Download - faustobe',
+        'download_description' => 'Kostenlose Ebooks zum Herunterladen: praktische Ratgeber zu Lebensmittelzusatzstoffen in 5 Sprachen.',
     ],
 
     // Home page
@@ -242,9 +245,16 @@ return [
 
     // Works
     'works' => [
-        'title'       => 'Arbeiten',
-        'tagline'     => 'Portfolio im Aufbau',
-        'description' => 'Dieser Bereich befindet sich in Entwicklung. Hier finden Sie bald eine Sammlung meiner Projekte und Arbeiten.',
+        'title'           => 'works',
+        'ecodes_title'    => 'E-Codes Reader',
+        'ecodes_desc'     => 'Android-App zur Lekt&uuml;re von Lebensmittelzusatzstoffen. Scanne den Barcode eines Produkts und erhalte die Zusatzstoffliste mit Risikoeinstufung, anpassbarem Profil f&uuml;r Di&auml;ten und Allergene, Nutri-Score, NOVA-Score und N&auml;hrwertangaben. Lokale Datenbank mit &uuml;ber 400 Zusatzstoffen, funktioniert offline. Kein Konto, kein Tracking.',
+        'ecodes_link'     => 'App-Details',
+        'jigger_title'    => 'Jigger',
+        'jigger_desc'     => 'Ma&szlig;geschneiderte Android-App f&uuml;r einen professionellen Barkeeper. Schichtplanung, anpassbares Cocktail-Inventar mit Suche und eigenen Eintr&auml;gen, Sitzungsverlauf. F&uuml;r den internen Gebrauch entwickelt, nicht im Google Play ver&ouml;ffentlicht.',
+        'gestionale_title' => 'Betriebliches Managementsystem',
+        'gestionale_desc'  => 'Ma&szlig;geschneidertes ERP f&uuml;r ein Lebensmittelunternehmen. Auftragsverwaltung, aktive/passive Rechnungsstellung, Kunden- und Lieferantendatenbank, Angebote, Bankabstimmung, Personalverwaltung. System im Einsatz mit 499 Kunden, 249 Produkten, &uuml;ber 900 Auftr&auml;gen und 1200+ verwalteten Rechnungen.',
+        'tag_private'     => 'privat',
+        'tag_production'  => 'in Produktion',
     ],
 
     // Guides section
@@ -360,6 +370,15 @@ return [
         'coming_soon'      => 'Demnächst',
         'coming_soon_desc' => 'Neue Ratgeber zu Zusatzstoffen, NOVA-Klassifikation und vielem mehr.',
         'in_arrivo'        => 'Demnächst',
+    ],
+
+    // Download
+    'download' => [
+        'title'        => 'download',
+        'intro'        => 'Kostenlose Ressourcen zum Herunterladen. Praktische Ratgeber und Dokumentation, produziert in LaTeX.',
+        'ebooks_title' => 'Kostenlose Ebooks',
+        'cta_text'     => 'Ben&ouml;tigen Sie technische Dokumentation, Handb&uuml;cher oder Ebooks in Ihrer Sprache? Ich kann sie professionell in LaTeX produzieren. Schreiben Sie mir:',
+        'also_in'      => 'Auch verf&uuml;gbar auf',
     ],
 
     // Dienste

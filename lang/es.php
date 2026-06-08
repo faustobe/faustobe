@@ -13,6 +13,7 @@ return [
         'works'       => 'works',
         'guides'      => 'Gu&iacute;as',
         'servizi'     => 'servicios',
+        'download'    => 'download',
     ],
 
     // Footer
@@ -60,6 +61,8 @@ return [
         'guides_rischi_upf_description'        => 'Obesidad, inflamaci&oacute;n, disbiosis intestinal: lo que dice la ciencia sobre los riesgos de los ultraprocesados y c&oacute;mo reducirlos en la dieta diaria.',
         'servizi_title'       => 'Servicios - faustobe',
         'servizi_description' => 'Desarrollo web, apps Android y documentos LaTeX a medida.',
+        'download_title'       => 'Download - faustobe',
+        'download_description' => 'Ebooks gratuitos para descargar: guías prácticas sobre aditivos alimentarios en 5 idiomas.',
     ],
 
     // Home page
@@ -242,9 +245,16 @@ return [
 
     // Works
     'works' => [
-        'title'       => 'Trabajos',
-        'tagline'     => 'Portfolio en construcci&oacute;n',
-        'description' => 'Esta secci&oacute;n est&aacute; en desarrollo. Pronto encontrar&aacute;s aqu&iacute; una colecci&oacute;n de mis proyectos y trabajos.',
+        'title'           => 'works',
+        'ecodes_title'    => 'E-Codes Reader',
+        'ecodes_desc'     => 'App Android para la lectura de aditivos alimentarios. Escanea el c&oacute;digo de barras de un producto y obt&eacute;n la lista de aditivos con clasificaci&oacute;n de riesgo, perfil personalizable para dietas y al&eacute;rgenos, Nutri-Score, NOVA Score y valores nutricionales. Base de datos local con m&aacute;s de 400 aditivos, funciona sin conexi&oacute;n. Sin cuenta, sin rastreo.',
+        'ecodes_link'     => 'Detalles app',
+        'jigger_title'    => 'Jigger',
+        'jigger_desc'     => 'App Android a medida para un bartender profesional. Gesti&oacute;n de turnos de trabajo, inventario de c&oacute;cteles personalizable con b&uacute;squeda y adiciones propias, historial de sesiones. Desarrollada para uso interno, no publicada en Google Play.',
+        'gestionale_title' => 'Sistema de gesti&oacute;n empresarial',
+        'gestionale_desc'  => 'ERP a medida para una empresa del sector alimentario. Gesti&oacute;n de pedidos y facturaci&oacute;n activa/pasiva, base de datos de clientes y proveedores, presupuestos, conciliaci&oacute;n bancaria, gesti&oacute;n de recursos humanos. Sistema en producci&oacute;n con 499 clientes, 249 productos, m&aacute;s de 900 pedidos y 1200+ facturas gestionadas.',
+        'tag_private'     => 'uso privado',
+        'tag_production'  => 'en producci&oacute;n',
     ],
 
     // Guides section
@@ -360,6 +370,15 @@ return [
         'coming_soon'      => 'Pr&oacute;ximamente',
         'coming_soon_desc' => 'Nuevas gu&iacute;as sobre aditivos, clasificaci&oacute;n NOVA y mucho m&aacute;s.',
         'in_arrivo'        => 'Pr&oacute;ximamente',
+    ],
+
+    // Download
+    'download' => [
+        'title'        => 'download',
+        'intro'        => 'Recursos gratuitos para descargar. Gu&iacute;as pr&aacute;cticas y documentaci&oacute;n producida en LaTeX.',
+        'ebooks_title' => 'Ebooks gratuitos',
+        'cta_text'     => '&iquest;Necesitas documentaci&oacute;n t&eacute;cnica, manuales o ebooks en tu idioma? Puedo producirlos en LaTeX en formato profesional. Escr&iacute;beme:',
+        'also_in'      => 'Disponible tambi&eacute;n en',
     ],
 
     // Servicios

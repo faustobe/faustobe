@@ -2,5 +2,7 @@
 .claude/
 *.apk
 docs/
+appo/
+SPEC*
 CLAUDE.md
 SKILL.md

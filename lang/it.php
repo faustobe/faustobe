@@ -13,6 +13,7 @@ return [
         'works'       => 'works',
         'guides'      => 'guide',
         'servizi'     => 'servizi',
+        'download'    => 'download',
     ],
 
     // Footer
@@ -60,6 +61,8 @@ return [
         'guides_rischi_upf_description'        => 'Obesità, infiammazione, microbiota: cosa dice la ricerca sui rischi degli ultra-processati e come ridurli nella dieta quotidiana.',
         'servizi_title'       => 'Servizi - faustobe',
         'servizi_description' => 'Sviluppo web, app Android e documenti LaTeX su misura.',
+        'download_title'       => 'Download - faustobe',
+        'download_description' => 'Ebook gratuiti da scaricare: guide pratiche agli additivi alimentari in 5 lingue.',
     ],
 
     // Home page
@@ -242,9 +245,16 @@ return [
 
     // Works
     'works' => [
-        'title'       => 'Works',
-        'tagline'     => 'Portfolio in costruzione',
-        'description' => 'Questa sezione è in fase di sviluppo. Presto troverai qui una raccolta dei miei progetti e lavori.',
+        'title'           => 'works',
+        'ecodes_title'    => 'E-Codes Reader',
+        'ecodes_desc'     => 'App Android per la lettura degli additivi alimentari. Scansiona il codice a barre di un prodotto e ottieni in secondi la lista degli additivi con classificazione del rischio, profilo personalizzabile per diete e allergeni, Nutri-Score, NOVA Score e valori nutrizionali. Database locale con oltre 400 additivi, funziona offline. Nessun account, nessun tracciamento.',
+        'ecodes_link'     => 'Dettaglio app',
+        'jigger_title'    => 'Jigger',
+        'jigger_desc'     => 'App Android su misura per un bartender professionista. Gestione dei turni di lavoro, inventario cocktail personalizzabile con ricerca e aggiunta custom, storico delle sessioni. Sviluppata per uso interno, non pubblicata su Google Play.',
+        'gestionale_title' => 'Gestionale aziendale',
+        'gestionale_desc'  => 'ERP su misura per azienda del settore alimentare. Gestione ordini e fatturazione attiva/passiva, anagrafica clienti e fornitori, preventivi, riconciliazione bancaria, gestione risorse umane. Sistema in uso con 499 clienti, 249 prodotti, oltre 900 ordini e 1200+ fatture gestite.',
+        'tag_private'     => 'uso privato',
+        'tag_production'  => 'in produzione',
     ],
 
     // Guides section
@@ -360,6 +370,15 @@ return [
         'coming_soon'      => 'Prossimamente',
         'coming_soon_desc' => 'Nuove guide in arrivo su additivi, classificazione NOVA e molto altro.',
         'in_arrivo'        => 'In arrivo',
+    ],
+
+    // Download
+    'download' => [
+        'title'        => 'download',
+        'intro'        => 'Risorse gratuite da scaricare. Guide pratiche e documentazione prodotta in LaTeX.',
+        'ebooks_title' => 'Ebook gratuiti',
+        'cta_text'     => 'Hai bisogno di documentazione tecnica, manuali o ebook nella tua lingua? Posso produrli in LaTeX in formato professionale. Scrivimi:',
+        'also_in'      => 'Disponibile anche in',
     ],
 
     // Servizi

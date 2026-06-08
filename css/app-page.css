@@ -443,6 +443,257 @@
 }
 
 /* ==========================================================================
+   WORKS PAGE — PROJECT CARDS
+   ========================================================================== */
+
+.works-page h1 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-primary);
+}
+
+.project-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background: var(--bg-secondary);
+}
+
+.project-card__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.project-card__desc {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-tag {
+    display: inline-block;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.2rem 0.65rem;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    font-family: monospace;
+}
+
+.project-tag--private {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.project-tag--production {
+    border-color: #4caf50;
+    color: #4caf50;
+}
+
+.project-card__footer {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 0.55rem 1.1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s, transform 0.2s;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+}
+
+.project-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.project-link--store {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+.project-link--store:hover {
+    background: var(--accent-hover);
+    color: #fff;
+    border-color: var(--accent-hover);
+}
+
+.project-card__screenshots {
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+}
+
+/* ==========================================================================
+   DOWNLOAD PAGE — EBOOK CARDS
+   ========================================================================== */
+
+.download-page .page-lead {
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.download-page .section-title {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 1.75rem;
+}
+
+/* Featured card — current language */
+.ebook-featured {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    max-width: 420px;
+    margin-bottom: 2rem;
+}
+
+.ebook-featured__badge {
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.3rem 0.8rem;
+    align-self: flex-start;
+    margin: 1rem 1rem 0;
+    border-radius: 4px;
+}
+
+.ebook-featured__body {
+    padding: 0.9rem 1rem 1rem;
+    flex: 1;
+}
+
+.ebook-featured__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.ebook-featured__desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.ebook-featured__footer {
+    padding: 0 1rem 1rem;
+}
+
+/* "Also available in" row */
+.ebook-also-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.6rem;
+}
+
+.ebook-others {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.ebook-other-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.75rem 0.35rem 0.45rem;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: border-color 0.15s, color 0.15s;
+}
+
+.ebook-other-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.ebook-other-link__badge {
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 0.1rem 0.45rem;
+    border-radius: 3px;
+}
+
+.ebook-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 0.55rem 1rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    box-sizing: border-box;
+}
+
+.ebook-btn:hover {
+    background: var(--accent-hover);
+    color: #fff;
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.download-cta {
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.download-cta__text {
+    margin-bottom: 0.5rem;
+}
+
+.download-cta__link {
+    font-weight: 500;
+    color: var(--accent);
+}
+
+.download-cta__link:hover {
+    color: var(--accent-hover);
+}
+
+/* ==========================================================================
    PRIVACY PAGE STYLES
    ========================================================================== */
 

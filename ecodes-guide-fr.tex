@@ -1,0 +1,889 @@
+% ============================================================
+%  Manger Consciemment — Guide pratique sur les additifs alimentaires
+%  faustobe.it | 2026 | CC BY-NC 4.0
+% ============================================================
+\documentclass[a5paper,12pt,oneside,openany]{book}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{ebgaramond}
+\usepackage[a5paper, top=2cm, bottom=3cm, inner=2.2cm, outer=3cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage[french]{babel}
+
+% Colors
+\definecolor{verdescuro}{HTML}{2d6a4f}
+\definecolor{verdecharo}{HTML}{52b788}
+\definecolor{grigioscuro}{HTML}{2b2d42}
+\definecolor{jaune}{HTML}{d4a017}
+\definecolor{rouge}{HTML}{c1121f}
+\definecolor{bleuinfo}{HTML}{3a86ff}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=verdescuro,
+  urlcolor=verdescuro,
+  pdftitle={Manger Consciemment},
+  pdfauthor={faustobe},
+}
+
+\usepackage{qrcode}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{microtype}
+
+% Colored boxes
+\tcbset{
+  boitebase/.style={
+    breakable, enhanced, arc=4pt, boxrule=0.8pt,
+    fonttitle=\bfseries\small,
+    before upper={\parskip=4pt},
+  }
+}
+
+\newcommand{\boxvert}[2]{%
+  \begin{tcolorbox}[boitebase,
+    colback=verdescuro!8!white, colframe=verdescuro, title={#1}]
+  #2\end{tcolorbox}}
+
+\newcommand{\boxjaune}[2]{%
+  \begin{tcolorbox}[boitebase,
+    colback=jaune!12!white, colframe=jaune!80!black, title={#1}]
+  #2\end{tcolorbox}}
+
+\newcommand{\boxrouge}[2]{%
+  \begin{tcolorbox}[boitebase,
+    colback=rouge!8!white, colframe=rouge, title={#1}]
+  #2\end{tcolorbox}}
+
+\newcommand{\boxinfo}[2]{%
+  \begin{tcolorbox}[boitebase,
+    colback=bleuinfo!8!white, colframe=bleuinfo, title={#1}]
+  #2\end{tcolorbox}}
+
+% Page style
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\footnotesize\textcolor{grigioscuro}{\textit{Manger Consciemment\ \textbar\ faustobe.it}}}
+\fancyfoot[R]{\footnotesize\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\footnotesize\textcolor{grigioscuro}{\textit{Manger Consciemment\ \textbar\ faustobe.it}}}%
+  \fancyfoot[R]{\footnotesize\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0.4pt}%
+}
+
+% Chapter title style
+\titleformat{\chapter}[display]
+  {\normalfont\LARGE\bfseries\color{verdescuro}}
+  {\chaptertitlename\ \thechapter}{10pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{30pt}
+
+% ============================================================
+\begin{document}
+
+% -------- COUVERTURE --------
+\begin{titlepage}
+\pagecolor{verdescuro}
+\color{white}
+\vspace*{2.5cm}
+\begin{center}
+  {\fontsize{36}{42}\selectfont\bfseries Manger Consciemment}\\[1.2cm]
+  \textcolor{verdecharo}{\rule{6cm}{0.6pt}}\\[1.2cm]
+  {\large\itshape Guide pratique sur les additifs alimentaires}\\[0.6cm]
+  {\normalsize Avec E-Codes Reader pour Android}\\[3cm]
+  {\normalsize\textcolor{verdecharo}{faustobe.it}}
+\end{center}
+\vfill
+\begin{center}
+  {\small Version 1.0\ \textbullet\ 2026\ \textbullet\ CC BY-NC 4.0}
+\end{center}
+\end{titlepage}
+\nopagecolor
+
+\frontmatter
+\tableofcontents
+\mainmatter
+
+% ============================================================
+\chapter{Comment utiliser l'app pour faire ses courses en conscience}
+
+Apprenez à reconnaître les aliments les plus transformés et à choisir ceux
+vraiment simples et naturels en quelques minutes, sans devenir un expert
+des additifs.
+
+\section{Avant de scanner, faites trois vérifications rapides}
+
+Avant même d'ouvrir l'app, observez l'emballage. Les étiquettes recto sont
+souvent conçues pour faire paraître les produits plus sains qu'ils ne le sont.
+
+\begin{itemize}
+  \item \textbf{Regardez le recto de l'emballage.} Méfiez-vous des allégations
+    comme «sans sucre mais avec édulcorants», «sans matières grasses mais avec
+    émulsifiants», «goût extra» ou «aromatisé». Elles indiquent souvent que le
+    produit a été fortement modifié.
+  \item \textbf{Ouvrez l'app et scannez le produit.} Utilisez l'appareil photo
+    pour scanner le code-barres ou importez une photo de l'étiquette. L'app vous
+    affichera immédiatement la liste des ingrédients et des additifs présents.
+  \item \textbf{Vérifiez trois points clés.} Combien d'additifs apparaissent
+    (surtout les codes~E) ? La liste des ingrédients est-elle longue et
+    complexe ? Quelle quantité de sucres, sel et graisses est déclarée ?
+\end{itemize}
+
+Si vous répondez «beaucoup» ou «longue/compliquée» à plus d'une question, vous
+êtes probablement face à un aliment très transformé.
+
+\section{Trois règles pour repérer un aliment «trop transformé»}
+
+\textbf{Peu d'ingrédients = mieux.} Si la liste est courte et contient des noms
+familiers (ex. «farine, eau, sel, huile»), le produit est peu transformé et
+généralement plus fiable.
+
+\textbf{Beaucoup d'ingrédients «imprononçables».} Des termes comme «amidons
+modifiés», «protéines isolées», «mono- et diglycérides d'acides gras»,
+«exhausteurs de goût» ou «arômes complexes» signalent clairement un aliment
+très transformé.
+
+\textbf{Beaucoup de codes~E et d'additifs.} Tous les~E ne sont pas dangereux,
+mais leur présence en masse --- colorants, conservateurs, stabilisants,
+émulsifiants --- indique un degré élevé de transformation industrielle.
+
+\section{Comment interpréter le résultat de l'app}
+
+Chaque produit reçoit une évaluation rapide : pensez à ces couleurs comme à
+un feu tricolore alimentaire.
+
+\boxvert{Peu transformé --- feu vert}{Peu d'ingrédients, peu ou pas d'additifs~E.
+Sucres et sel modérés. Excellent choix pour les courses du quotidien.}
+
+\boxjaune{Modérément transformé --- avec modération}{Quelques~E, arômes naturels
+ou sucres ajoutés. Acceptable de temps en temps, pas comme base de chaque repas.}
+
+\boxrouge{Ultra-transformé --- à limiter ou éviter}{Beaucoup d'additifs, sucres
+ajoutés, arômes complexes et graisses d'origine industrielle. À réserver comme
+vraie exception, surtout pour les enfants.}
+
+\section{Comment utiliser l'app concrètement en faisant ses courses}
+
+\textbf{Étape 1 : Commencez par le rayon frais et petit-déjeuner.} Scannez
+yaourts, pain, lait, boissons. Cherchez des produits avec peu d'ingrédients,
+peu de codes~E, et des sucres simples (fruits, lait, sucre de canne) plutôt que
+des sirops et édulcorants.
+
+\textbf{Étape 2 : Passez ensuite aux sucreries et snacks.} Si la liste est très
+longue et pleine de~E, l'app affichera du rouge. Choisissez toujours l'alternative
+plus simple : fruits, pain complet, noix.
+
+\textbf{Étape 3 : Utilisez l'app pour comparer des produits similaires.} Souvent
+celui qui a moins d'ingrédients est juste légèrement moins attrayant en rayon,
+mais bien plus naturel.
+
+\textbf{Étape 4 : Réservez les «rouges» à l'exception, pas à la règle.} Il suffit
+de réduire les ultra-transformés. Fixez-vous un seuil --- par exemple, maximum
+1--2 produits «rouges» par semaine.
+
+\section{Tableau récapitulatif}
+
+{\small
+\begin{tabularx}{\textwidth}{|L|L|}
+\hline
+\rowcolor{verdescuro}\textcolor{white}{\textbf{Résultat dans l'app}}
+  & \textcolor{white}{\textbf{Que faire en pratique}} \\
+\hline
+Peu d'ingrédients, peu/pas de~E
+  & Base quotidienne : yaourt nature, pain complet, coulis de tomates \\
+\hline
+Quelques~E, sucres modérés
+  & Consommez-le de temps en temps, pas comme aliment principal \\
+\hline
+Beaucoup de~E, sucres ajoutés, arômes complexes
+  & Limitez ou évitez : réservez-le à une vraie exception \\
+\hline
+\end{tabularx}
+}
+
+\section{Pourquoi apprendre à lire les additifs fait vraiment la différence}
+
+Reconnaître les aliments les plus transformés n'est pas une «phobie des additifs» :
+c'est porter attention à la qualité de ce que nous mangeons. De nombreuses études
+suggèrent que réduire les ultra-transformés aide à long terme à contrôler le poids,
+à préserver la santé cardiovasculaire et à stabiliser le métabolisme.
+
+% ============================================================
+\chapter{Comment lire une étiquette nutritionnelle}
+
+Ingrédients, calories, sel caché : apprenez à déchiffrer une étiquette en moins
+d'une minute et arrêtez d'acheter des produits qui semblent sains mais ne le sont pas.
+
+\section{La liste des ingrédients : par où commencer}
+
+Les ingrédients suivent un \textbf{ordre décroissant de poids} : ce qui apparaît
+en premier est présent en plus grande quantité.
+
+\begin{itemize}
+  \item Le premier ingrédient est le plus important.
+  \item Si le premier ingrédient est «sucre», «sirop de glucose» ou «huile de
+    palme», le produit est construit autour de cet élément.
+  \item La longueur de la liste indique le degré de transformation : pain maison
+    = 4 ingrédients ; pain industriel = 15 ou plus.
+  \item Cherchez des noms difficiles à prononcer comme «amidon modifié» ou
+    «hydrogéné».
+\end{itemize}
+
+\boxinfo{Règle pratique}{Si tous les ingrédients ne se trouvent pas dans une
+épicerie ordinaire, le produit est probablement très transformé.}
+
+\section{Le tableau nutritionnel : ce qu'il faut regarder}
+
+\begin{description}
+  \item[Sucres] Inférieur à 5\,g/100\,g = faible ; entre 5 et 22,5\,g = moyen ;
+    au-dessus de 22,5\,g = élevé. Pour les boissons : seuil faible = 2,5\,g/100\,ml.
+  \item[Sel] En dessous de 0,3\,g/100\,g = faible ; au-dessus de 1,5\,g/100\,g
+    = élevé. Le sodium indiqué sur l'étiquette doit être multiplié par 2,5 pour
+    obtenir la valeur en sel.
+  \item[Graisses saturées] Au-dessus de 5\,g/100\,g = élevé.
+\end{description}
+
+\section{Portions vs 100\,g : l'astuce qui prête à confusion}
+
+Les entreprises mettent en avant les valeurs par portion, souvent sous-estimées.
+Utilisez toujours les valeurs pour 100\,g pour comparer entre marques.
+
+\boxjaune{Exemple}{Si l'emballage indique 10\,g de sucres par portion de 30\,g
+et que vous en mangez 60\,g, vous consommez 20\,g de sucres.}
+
+\section{Le sel caché : où se cache-t-il vraiment}
+
+Le sel se trouve aussi dans les produits apparemment sucrés.
+
+\begin{itemize}
+  \item \textbf{Pain et produits de boulangerie :} deux tranches de pain industriel
+    peuvent contenir 0,5--0,8\,g de sel.
+  \item \textbf{Céréales du matin :} même les versions «saines» et «complètes»
+    peuvent contenir 0,8--1,2\,g de sel pour 100\,g.
+  \item \textbf{Sauces et condiments :} entre 1 et 3\,g de sel pour 100\,g.
+\end{itemize}
+
+\section{Les allégations nutritionnelles : ce qu'elles signifient vraiment}
+
+\textbf{«Sans sucres ajoutés» :} ne signifie pas sans sucres (peut contenir
+fructose, lactose), ni sans édulcorants artificiels.
+
+\textbf{«Light» ou «allégé» :} réduit de 30\,\% par rapport au produit de
+référence ; la graisse retirée est souvent remplacée par des sucres ou des
+épaississants.
+
+\textbf{«Riche en fibres» ou «source de protéines» :} requiert des seuils
+minimaux légaux, mais ne dit rien sur les autres ingrédients.
+
+\section{Liste de contrôle rapide à utiliser au supermarché}
+
+\begin{enumerate}
+  \item Regarder le premier ingrédient.
+  \item Compter les ingrédients : moins de 5 = excellent ; 5--10 = acceptable ;
+    plus de 10--12 = vérifier attentivement.
+  \item Vérifier les codes~E (additifs).
+  \item Vérifier sel et sucres pour 100\,g.
+  \item Ignorer les allégations en grand sur la face avant.
+\end{enumerate}
+
+\boxvert{L'astuce la plus simple}{Si vous reconnaissez tous les ingrédients et
+pourriez les cuisiner à la maison, vous êtes sur la bonne voie.}
+
+% ============================================================
+\chapter{Additifs et ultra-transformés : quelle différence ?}
+
+Un produit avec beaucoup d'additifs est-il nécessairement mauvais ? Et un
+ultra-transformé est-il toujours plein d'additifs ? La réponse pourrait vous
+surprendre.
+
+\section{Qu'est-ce que les additifs alimentaires}
+
+Les additifs sont des substances intentionnellement incorporées aux aliments pour
+assurer une fonction technologique : conservation, coloration, épaississement,
+émulsification ou stabilisation. En Europe, chaque additif approuvé reçoit un
+code~E et doit passer une évaluation de sécurité de l'EFSA.
+
+\begin{itemize}
+  \item Les additifs ne sont pas tous synthétiques : l'acide citrique, la
+    curcumine, la lécithine de soja et la vitamine~C sont d'origine naturelle.
+  \item La majorité des~E approuvés est considérée comme sûre aux doses
+    autorisées.
+  \item La problématique réside dans la quantité et la combinaison de nombreux
+    additifs.
+\end{itemize}
+
+\section{Qu'est-ce que les aliments ultra-transformés}
+
+Le terme «ultra-transformé» vient de la classification NOVA développée par
+l'Université de São Paulo. Un produit NOVA~4 contient des ingrédients
+introuvables en cuisine domestique : protéines isolées, amidons modifiés,
+hydrolysats de protéines, sirops de glucose-fructose, arômes «nature-identiques»,
+émulsifiants, colorants et stabilisants.
+
+\textbf{Ultra-transformés :} gâteaux industriels, snacks emballés, céréales
+sucrées, boissons gazeuses, saucisses reconstituées, plats surgelés avec
+sauces, yaourts aromatisés, pain de mie industriel.
+
+\textbf{Ce qui n'est PAS ultra-transformé :} fromages affinés, charcuteries
+de qualité, pain artisanal, pâtes sèches traditionnelles, conserves de tomates
+sans additifs, vinaigre, huile d'olive extra vierge.
+
+\section{Quand ils se recoupent --- et quand non}
+
+\begin{description}
+  \item[Additifs mais PAS ultra-transformé :] fromage avec conservateur E252,
+    vin avec sulfites E220, huile avec vitamine~E E306.
+  \item[Ultra-transformé avec PEU d'additifs~E :] pain de mie avec amidon
+    modifié et arômes, barres protéinées, surimi.
+  \item[Ultra-transformé ET avec de nombreux additifs :] gâteaux industriels,
+    sauces industrielles, boissons énergisantes.
+\end{description}
+
+\boxinfo{Conclusion}{Un produit avec un~E naturel n'est pas un problème. Un
+produit avec 15 ingrédients industriels sans aucun~E est quand même
+un ultra-transformé.}
+
+\section{Le double problème : pourquoi les deux comptent}
+
+\textbf{Risques liés à des additifs spécifiques :} colorants azoïques et
+hyperactivité infantile, nitrates et nitrosamines cancérigènes, édulcorants
+intenses et altération du microbiome.
+
+\textbf{Risques liés à l'ultra-transformation :} des études à grande échelle
+(NutriNet-Santé, UK Biobank) associent une consommation élevée de NOVA~4 à
+un risque accru d'obésité, de diabète de type~2, de maladies cardiovasculaires
+et de certains cancers.
+
+\textbf{L'effet de combinaison :} dans la vie réelle, nous consommons des
+combinaisons de 10 à 20 additifs différents au cours du même repas.
+
+\section{Comment les reconnaître en pratique}
+
+\begin{enumerate}
+  \item Repérez les ingrédients «de laboratoire» : amidons modifiés, protéines
+    isolées, hydrolysats, sirops de glucose-fructose.
+  \item Comptez les codes~E et identifiez les catégories critiques.
+  \item Tenez compte du contexte du repas.
+  \item Utilisez l'application comme aide, pas comme juge absolu.
+\end{enumerate}
+
+% ============================================================
+\chapter{Classification NOVA : qu'est-ce que c'est et comment l'utiliser}
+
+NOVA ne mesure pas les nutriments mais le \emph{degré de transformation
+industrielle}. Comprendre les 4 groupes change la façon dont vous faites
+vos courses.
+
+\section{Qu'est-ce que la classification NOVA}
+
+NOVA est un système de classification développé par le professeur Carlos Monteiro
+à l'Université de São Paulo et adopté par l'OMS et la FAO. Contrairement au
+Nutri-Score, NOVA classe selon le \emph{degré de transformation industrielle}
+et non selon la composition nutritionnelle.
+
+Les procédés modernes peuvent altérer les fibres, la biodisponibilité des
+nutriments et les réponses hormonales, indépendamment de la composition finale.
+NOVA divise les aliments en 4 groupes distincts, non en une échelle continue.
+
+\section{Groupe 1 --- Aliments non transformés ou peu transformés}
+
+Aliments sans transformation industrielle significative, ou seulement avec des
+procédés physiques minimaux : séchage, mouture, réfrigération, pasteurisation.
+
+\textbf{Exemples :} fruits et légumes frais ou surgelés, viandes et poissons
+frais sans additifs, œufs, légumineuses sèches, céréales en grain (riz, avoine,
+épeautre), farine complète, lait frais pasteurisé, yaourt nature sans additifs,
+thé, café, eau.
+
+\boxvert{Objectif}{Ces aliments devraient constituer la majorité de chaque repas.}
+
+\section{Groupe 2 --- Ingrédients culinaires transformés}
+
+Substances extraites d'aliments du Groupe~1 utilisées en cuisine pour cuire,
+assaisonner et préparer les aliments ; jamais consommées seules.
+
+\textbf{Exemples :} huile d'olive, beurre, vinaigre, sel, sucre, miel, farine
+blanche, amidon de maïs pur, sirop d'érable.
+
+À utiliser avec modération : le sucre, le sel et les graisses saturées en
+excès restent défavorables.
+
+\section{Groupe 3 --- Aliments transformés}
+
+Produits résultant de l'ajout d'ingrédients du Groupe~2 à des aliments du
+Groupe~1, avec des procédés comme la conservation au sel, le fumage, la
+fermentation ou l'affinage. Ils contiennent généralement 2--3 ingrédients.
+
+\textbf{Exemples :} légumes et légumineuses en conserve (avec eau et sel),
+fruits confits, noix grillées et salées, anchois à l'huile, jambon cru de
+qualité, fromages traditionnels (parmesan, comté), pain artisanal, vin, bière
+artisanale.
+
+Le Groupe~3 n'est pas à éviter ; de nombreux aliments traditionnels
+y appartiennent.
+
+\section{Groupe 4 --- Ultra-transformés : le groupe à limiter}
+
+Formulations industrielles ne contenant pas d'aliments entiers ou n'en utilisant
+qu'une infime partie. Ils sont construits avec des ingrédients extraits, purifiés
+ou modifiés chimiquement, plus des additifs technologiques en grandes quantités.
+
+Signal clé : ils contiennent des \textbf{ingrédients qu'on ne trouve pas dans
+une cuisine domestique}.
+
+Ingrédients typiques : protéines hydrolysées, amidons modifiés, sirop de
+glucose-fructose, huiles hydrogénées, arômes «nature-identiques», colorants
+artificiels, édulcorants intenses (aspartame, saccharine, sucralose),
+émulsifiants (E471, E472).
+
+\boxrouge{Données clés}{En France, environ 30--35\,\% des calories journalières
+proviennent d'ultra-transformés. Une consommation supérieure à 20\,\% des
+calories journalières de NOVA~4 est associée à des risques pour la santé.}
+
+\section{NOVA dans les courses au quotidien}
+
+\textbf{1.~«Pourrais-je le cuisiner à la maison avec des ingrédients normaux ?»}
+Si non, c'est probablement du Groupe~4.
+
+\textbf{2.~Cherchez les «mots révélateurs» du Groupe~4 :} «amidon modifié»,
+«protéines de soja isolées», «maltodextrines», «sirop de\ldots», «arômes
+complexes», «huile de palme hydrogénée».
+
+\textbf{3.~Règle pratique :} plus de la moitié de l'assiette doit provenir
+du Groupe~1.
+
+\section{Tableau récapitulatif NOVA}
+
+{\small
+\begin{tabularx}{\textwidth}{|l|L|L|l|}
+\hline
+\rowcolor{verdescuro}
+  \textcolor{white}{\textbf{Groupe}}
+  & \textcolor{white}{\textbf{Définition}}
+  & \textcolor{white}{\textbf{Exemples}}
+  & \textcolor{white}{\textbf{Alimentation}} \\
+\hline
+NOVA~1 & Non/peu transformés & Fruits, légumes, œufs, viande fraîche & Base \\
+\hline
+NOVA~2 & Ingrédients culinaires & Huile, sel, sucre, farine, beurre & Modération \\
+\hline
+NOVA~3 & Transformés traditionnels & Conserves, fromages, jambon, pain artisanal & Acceptable \\
+\hline
+NOVA~4 & Ultra-transformés & Gâteaux industriels, saucisses, céréales sucrées & À limiter \\
+\hline
+\end{tabularx}
+}
+
+% ============================================================
+\chapter{Ingrédients à surveiller sur les étiquettes}
+
+Pas besoin de lire chaque étiquette comme un chimiste. Quelques termes clés
+suffisent à éviter les produits les plus problématiques et à faire de meilleurs
+choix en quelques secondes.
+
+\section{Sucres : les 10 noms cachés sur les étiquettes}
+
+Le sucre utilise de nombreux alias pour sembler moins important dans la liste
+des ingrédients. Les 10 alias les plus courants :
+
+\begin{itemize}
+  \item Sirop de glucose-fructose
+  \item Maltodextrines
+  \item Dextrose
+  \item Fructose
+  \item Jus de canne concentré
+  \item Sirop de maïs / sirop de riz
+  \item Miel déshydraté
+  \item Sucre de coco
+  \item Nectar d'agave
+\end{itemize}
+
+\boxjaune{Le piège du «sans sucres ajoutés»}{Un jus «100\,\% fruit sans sucres
+ajoutés» peut contenir 10--12\,g de sucres pour 100\,ml --- plus qu'un Coca-Cola
+(10,6\,g/100\,ml). L'OMS recommande de maintenir les sucres libres sous 10\,\%
+des calories journalières (environ 50\,g/jour), de préférence sous 5\,\% (25\,g).}
+
+\section{Graisses à éviter : hydrogénées et trans}
+
+\textbf{Graisses hydrogénées et partiellement hydrogénées :} recherchez «huile
+végétale partiellement hydrogénée», «graisse végétale hydrogénée», «shortening».
+En Europe, ils sont interdits au-dessus de 2\,g/100\,g de graisses depuis 2021.
+
+\textbf{Huile de palme :} saturée mais non hydrogénée. Lors du raffinage à
+hautes températures, des composés potentiellement cancérigènes se forment
+(3-MCPD, glycidol).
+
+\boxvert{Les graisses qui conviennent}{Huile d'olive extra vierge, huile de lin,
+noix et oléagineux, avocat, graisses des poissons gras.}
+
+\section{Additifs controversés : les codes E à connaître}
+
+\textbf{Colorants azoïques --- vigilance maximale avec les enfants :}
+E102 (Tartrazine), E104 (Jaune de quinoléine), E110 (Jaune orangé~S),
+E122 (Carmoisine), E124 (Rouge Ponceau 4R), E129 (Rouge Allura~AC).
+Étude EFSA 2007 : corrélation avec l'hyperactivité chez les enfants. Mention
+obligatoire sur l'étiquette.
+
+\textbf{Nitrates et nitrites (E249--E252) :} utilisés dans les charcuteries,
+saucisses, bacon. En présence de protéines animales, ils forment des
+nitrosamines, classées comme probables cancérigènes (IARC groupe 2A).
+
+\textbf{Édulcorants intenses (E950, E951, E952, E954, E955) :} sûrs aux doses
+approuvées, mais l'OMS (2023) a exprimé une mise en garde sur l'usage
+chronique pour le contrôle du poids.
+
+\section{Sodium caché : au-delà du sel de cuisine}
+
+Environ 75\,\% du sodium dans l'alimentation occidentale n'est pas ajouté
+pendant la cuisson mais est déjà présent dans les produits emballés.
+
+Principales sources : pain (première source), fromages, charcuteries, plats
+préparés, sauces en bocal, bouillon cube, sauce soja, ketchup, mayonnaise,
+snacks salés, céréales industrielles.
+
+\boxinfo{Conversion sodium--sel}{Multipliez la valeur de sodium par 2,5.
+Exemple : 0,6\,g de sodium = 1,5\,g de sel. Limite OMS : 5\,g de sel par
+jour (environ 2\,g de sodium).}
+
+\section{La règle des 5 : le filtre le plus rapide}
+
+\begin{enumerate}
+  \item \textbf{Plus de 5 ingrédients ?} Commencez à lire attentivement.
+  \item \textbf{Sucres supérieurs à 5\,g/100\,g ?} Vérifiez s'il est le premier
+    ou deuxième ingrédient.
+  \item \textbf{Sel supérieur à 0,5\,g/100\,g dans un produit sucré ?} Signal
+    d'ultra-transformation.
+  \item \textbf{Plus de 5 additifs~E ?} Le produit est probablement ultra-transformé.
+  \item \textbf{Vous ne reconnaissez pas 5 ingrédients ou plus ?} Reposez-le
+    sur l'étagère.
+\end{enumerate}
+
+\boxinfo{Note}{La règle des 5 est une orientation, non un verdict absolu.}
+
+% ============================================================
+\chapter{Aliments recommandés : les options les plus saines au supermarché}
+
+Il ne s'agit pas d'être parfait ni de ne manger que de la salade. Il s'agit
+de savoir quels produits, à commodité égale, sont vraiment meilleurs que
+les autres.
+
+\section{Le principe de base : substituer, pas éliminer}
+
+\begin{description}
+  \item[Même temps, moins de transformation.] Remplacer yaourt aromatisé par
+    yaourt nature, riz précuit par riz complet, plats préparés par légumineuses
+    en boîte.
+  \item[Règle 80/20.] Si 80\,\% de l'alimentation est peu transformée, les
+    20\,\% restants ne posent pas problème.
+  \item[Accessibilité tarifaire.] Pois chiches en boîte, œufs, farine complète,
+    lentilles coûtent moins que les produits transformés équivalents.
+\end{description}
+
+\section{Céréales et glucides : les meilleurs choix}
+
+\textbf{Recommandées :} flocons d'avoine nature, riz complet, épeautre, orge
+perlé, sarrasin, pâtes complètes, pain avec maximum 4--5 ingrédients.
+
+\textbf{À limiter :} céréales sucrées, pain de mie avec additifs, crackers à
+l'huile de palme, riz précuit avec additifs, bollería industrielle.
+
+\boxjaune{Astuce}{Si les sucres dépassent 10\,g/100\,g, vous mangez un produit
+de dessert, pas un petit-déjeuner sain.}
+
+\section{Protéines : les meilleures sources}
+
+\textbf{Poissons et fruits de mer :} frais ou surgelés sans additifs, sardines
+et maquereaux à l'huile d'olive, thon au naturel, anchois en sel.
+
+\textbf{Œufs et produits laitiers :} œufs entiers, yaourt grec nature, fromage
+blanc, fromages affinés modérément. Évitez les yaourts «protéinés» avec
+épaississants et édulcorants.
+
+\textbf{Légumineuses :} lentilles, pois chiches, haricots en boîte au naturel,
+riches en fibres et acides aminés.
+
+\section{Bonnes graisses : les plus simples à ajouter}
+
+\textbf{Recommandées :} huile d'olive extra vierge, noix, amandes, graines de
+lin, avocat, poissons gras.
+
+\textbf{Avec modération :} beurre naturel, huile de coco, lait entier.
+
+\textbf{À éviter :} margarines hydrogénées, shortening, huile de palme
+raffinée, crème végétale avec émulsifiants.
+
+\section{Encas intelligents}
+
+\begin{enumerate}
+  \item \textbf{Fruits secs nature :} noix, amandes, noisettes sans sel
+    (30\,g apportent protéines et minéraux).
+  \item \textbf{Fruits frais entiers :} pomme, poire, kiwi (contiennent des
+    fibres contrairement aux jus).
+  \item \textbf{Yaourt grec nature :} haute protéine, faible indice glycémique.
+  \item \textbf{Fromage à pâte dure + crackers complets :} satiété durable
+    avec ingrédients simples.
+\end{enumerate}
+
+\section{Liste de courses type}
+
+{\small
+\begin{tabularx}{\textwidth}{|l|L|}
+\hline
+\rowcolor{verdescuro}
+  \textcolor{white}{\textbf{Catégorie}}
+  & \textcolor{white}{\textbf{Produits}} \\
+\hline
+Céréales & Flocons d'avoine, riz complet, pâtes complètes, pain artisanal \\
+\hline
+Légumineuses & Lentilles, pois chiches, haricots \\
+\hline
+Protéines & Œufs, sardines, thon, yaourt grec nature \\
+\hline
+Légumes & Frais ou surgelés sans additifs \\
+\hline
+Graisses & Huile EVO, noix, amandes, graines \\
+\hline
+Fruits & Fruits entiers de saison, baies surgelées \\
+\hline
+Condiments & Vinaigre, sauce soja peu transformée, épices \\
+\hline
+\end{tabularx}
+}
+
+\boxvert{Test du caddie}{Vérifier que plus de la moitié des produits contient
+moins de 5 ingrédients.}
+
+% ============================================================
+\chapter{Pourquoi les aliments ultra-transformés sont mauvais pour la santé}
+
+Ce n'est pas seulement une question de calories ou de graisses : les
+ultra-transformés perturbent la satiété, altèrent le microbiome et déclenchent
+une inflammation chronique.
+
+\section{Obésité et altération du métabolisme}
+
+Les UPF sont conçus pour être \emph{hyper-appétissants} et interfèrent
+activement avec les signaux naturels de satiété.
+
+\boxinfo{Étude Kevin Hall (NIH, 2019)}{Les participants au régime
+ultra-transformé consommaient \emph{en moyenne 500 calories de plus par jour}
+que ceux au régime d'aliments peu transformés, avec gain de près d'un kilogramme
+en deux semaines.}
+
+Les UPF contiennent en moyenne 2,15\,kcal par gramme (presque le double des
+aliments frais) et réduisent le peptide~YY, l'hormone intestinale qui signale
+la satiété au cerveau.
+
+Statistique : \textbf{+41\,\% de risque d'obésité abdominale} pour les
+consommateurs réguliers d'UPF.
+
+\section{Inflammations et dysfonctionnements immunitaires}
+
+La consommation fréquente d'ultra-transformés est associée à une augmentation
+des réponses immunitaires inflammatoires, au-delà du profil nutritionnel seul.
+
+Des additifs fréquents dans les UPF --- carboxyméthylcellulose (E466),
+polysorbate~80 (E433), dioxyde de titane (E171) --- peuvent altérer la muqueuse
+intestinale et augmenter la perméabilité intestinale (\textit{leaky gut}).
+
+\textbf{Maladies auto-immunes associées :} maladie cœliaque, thyroïdite de
+Hashimoto, sclérose en plaques, lupus érythémateux systémique, diabète
+de type~1.
+
+\section{Santé intestinale et microbiote}
+
+Le processus d'ultra-transformation prive les aliments de fibres alimentaires
+et de composés végétaux bioactifs. Les émulsifiants et les édulcorants
+artificiels affaiblissent la couche muqueuse qui tapisse l'intestin.
+
+\textbf{Pathologies fréquentes :} maladie de Crohn, rectocolite hémorragique,
+syndrome de l'intestin irritable, ulcères gastriques, polypes précancéreux
+du côlon.
+
+\section{Un risque systémique : plusieurs mécanismes à la fois}
+
+{\small
+\begin{tabularx}{\textwidth}{|l|L|L|}
+\hline
+\rowcolor{verdescuro}
+  \textcolor{white}{\textbf{Mécanisme}}
+  & \textcolor{white}{\textbf{Effet}}
+  & \textcolor{white}{\textbf{Conséquence}} \\
+\hline
+Hyper-appétibilité & Consommation excessive & Obésité, diabète type~2 \\
+\hline
+Carence en fibres & Dysbiose & Inflammation chronique \\
+\hline
+Additifs (émulsifiants) & Perméabilité intestinale & MICI, maladies auto-immunes \\
+\hline
+Sucres/édulcorants & Résistance insulinique & Diabète, syndrome métabolique \\
+\hline
+Remplacement des frais & Carence micronutriments & Stress oxydatif \\
+\hline
+\end{tabularx}
+}
+
+Les grandes études --- NutriNet-Santé (France, 100\,000+ participants) et
+UK Biobank (500\,000+) --- associent le consommation élevée d'UPF à des
+risques accrus de cancer, maladies cardiovasculaires, dépression et mortalité.
+
+\section{Que faire en pratique}
+
+Le message pratique : \emph{réduisez la part d'UPF} plutôt que d'éliminer
+complètement.
+
+\begin{enumerate}
+  \item \textbf{Identifiez vos UPF habituels :} céréales sucrées, snacks,
+    pain de mie, plats préparés, boissons aromatisées.
+  \item \textbf{Remplacez-les progressivement :} avoine pour céréales, yaourt
+    nature pour yaourt aromatisé, pain artisanal.
+  \item \textbf{Augmentez les fibres --- priorité :} légumineuses, légumes,
+    céréales complètes, fruits entiers.
+  \item \textbf{Utilisez l'app :} E-Codes Reader identifie les ultra-transformés
+    lors du scan du code-barres.
+  \item \textbf{Ne visez pas la perfection :} même une amélioration de
+    20--30\,\% produit des effets mesurables.
+\end{enumerate}
+
+% ============================================================
+\chapter{Sécurité alimentaire pour les enfants et les personnes âgées}
+
+Les enfants et les personnes âgées réagissent différemment aux additifs et
+ingrédients de mauvaise qualité par rapport aux adultes en bonne santé.
+
+\section{Pourquoi les enfants et les personnes âgées sont plus vulnérables}
+
+\textbf{Enfants : poids corporel faible, systèmes immatures.} Un enfant de 15\,kg
+consommant un goûter de 30\,g avec colorants reçoit une dose relative 4 à 5 fois
+supérieure à celle d'un adulte de 70\,kg. Le foie et les reins métabolisent
+certaines substances plus lentement chez les jeunes enfants.
+
+\textbf{Personnes âgées : fonctions rénale et hépatique réduites.} La capacité
+d'éliminer certaines substances diminue avec l'âge. La polymédication peut
+interagir avec des additifs. Le sodium excessif aggrave l'hypertension et
+l'insuffisance rénale.
+
+\textbf{Effets cumulatifs :} une consommation quotidienne de produits contenant
+certains colorants produit des effets cumulatifs significatifs.
+
+\section{Additifs critiques pour les enfants}
+
+\textbf{Colorants azoïques --- à éviter :}
+E102, E104, E110, E122, E124, E129 nécessitent l'étiquetage : «peut avoir des
+effets indésirables sur l'activité et l'attention des enfants». Retrouvés dans
+les bonbons, boissons oranges/rouges, gelées, céréales du matin.
+
+\textbf{Édulcorants intenses --- non approuvés pour jeunes enfants :}
+E951, E950, E955, E954. Présents dans les yaourts «0\,\% sucre», boissons
+\textit{light}, sirops, bonbons sans sucre.
+
+\boxrouge{Caféine}{L'EFSA recommande maximum 3\,mg/kg/jour. Une canette de
+250\,ml d'energy drink peut contenir jusqu'à 80\,mg --- presque le double
+de la limite pour un enfant de 15\,kg.}
+
+\section{Ce qu'il faut limiter chez les personnes âgées}
+
+\textbf{Sodium : le risque principal.} Objectif : moins de 5\,g de sel
+quotidien. Vecteurs principaux : plats préparés, charcuteries, fromages,
+bouillons industriels.
+
+\textbf{Phosphates (E338--E452) :} courants dans les viandes transformées,
+fromages fondus. Une consommation élevée interfère avec l'absorption du calcium
+--- un problème pour les personnes à risque d'ostéoporose.
+
+\textbf{Interactions médicamenteuses :} la vitamine~K des légumes verts avec
+les warfarines ; le pamplemousse avec les statines ; le jus de cranberry avec
+certains anticoagulants.
+
+\section{Produits «pour enfants» à regarder attentivement}
+
+\textbf{Céréales du matin «pour enfants» :} contiennent souvent 25--35\,g de
+sucres pour 100\,g, colorants artificiels et vitamines ajoutées pour
+compenser la faible qualité nutritive.
+
+\textbf{Boissons «aux jus de fruits» :} peuvent ne contenir que 10--30\,\% de
+jus réel. Vérifiez toujours le pourcentage de fruits sur l'étiquette.
+
+\textbf{Yaourts «pour enfants» aux fruits :} contiennent souvent plus de sucre
+qu'un yaourt standard, plus d'épaississants et arômes artificiels.
+
+\section{Liste sécurisée pour les courses}
+
+\begin{enumerate}
+  \item \textbf{Pour les enfants :} produits avec peu d'ingrédients reconnaissables ;
+    évitez plus de 2--3 colorants ou édulcorants artificiels.
+  \item \textbf{Vérifiez les sucres dans les produits «pour enfants» :}
+    moins de 10\,g/100\,g.
+  \item \textbf{Pour personnes âgées :} priorité à faible sodium ;
+    moins de 0,3\,g sel/100\,g.
+  \item \textbf{Scannez avec l'app avant d'acheter :} E-Codes Reader indique
+    immédiatement les colorants azoïques et le niveau de sodium.
+  \item \textbf{Privilégiez le Groupe~1--2 (NOVA) pour les repas principaux :}
+    légumes, légumineuses, œufs, poisson, yaourt nature, fruits entiers.
+\end{enumerate}
+
+\section{Tableau récapitulatif}
+
+{\small
+\begin{tabularx}{\textwidth}{|L|l|l|}
+\hline
+\rowcolor{verdescuro}
+  \textcolor{white}{\textbf{Additif/ingrédient}}
+  & \textcolor{white}{\textbf{Enfants}}
+  & \textcolor{white}{\textbf{Personnes âgées}} \\
+\hline
+Colorants azoïques (E102, E110, E122\ldots) & À éviter & À limiter \\
+\hline
+Édulcorants intenses & Pas pour jeunes enf. & Avec modération \\
+\hline
+Sodium élevé (>1,5\,g sel/100\,g) & À limiter & À éviter \\
+\hline
+Phosphates (E338--E452) & Modération & À limiter \\
+\hline
+Caféine & À éviter <12 ans & Attention \\
+\hline
+Nitrates/nitrites (E249--E252) & À limiter & À limiter \\
+\hline
+\end{tabularx}
+}
+
+% ============================================================
+\backmatter
+
+\chapter*{Crédits et téléchargement}
+\addcontentsline{toc}{chapter}{Crédits}
+
+\begin{center}
+\vspace{1cm}
+{\large\bfseries\color{verdescuro} Manger Consciemment}\\[0.4cm]
+{\itshape Guide pratique sur les additifs alimentaires}\\[0.3cm]
+{\small Avec E-Codes Reader pour Android}
+
+\vspace{1.5cm}
+\textbf{Version 1.0} \quad \textbullet \quad 2026\\
+\textbf{Licence :} Creative Commons BY-NC 4.0\\[0.3cm]
+\textbf{Site web :} \href{https://faustobe.it}{faustobe.it}\\
+\textbf{Application :} \href{https://play.google.com/store/apps/details?id=it.faustobe.ecodes}{E-Codes Reader sur Google Play}
+
+\vspace{1.5cm}
+{\small Scannez le code QR pour télécharger l'application :}\\[0.5cm]
+
+\qrcode[height=4cm]{https://play.google.com/store/apps/details?id=it.faustobe.ecodes}
+
+\vspace{1cm}
+{\footnotesize Cet ebook a été produit en \LaTeX{} par faustobe.}
+\end{center}
+
+\end{document}

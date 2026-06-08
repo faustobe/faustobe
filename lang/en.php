@@ -13,6 +13,7 @@ return [
         'works'       => 'works',
         'guides'      => 'guides',
         'servizi'     => 'services',
+        'download'    => 'download',
     ],
 
     // Footer
@@ -60,6 +61,8 @@ return [
         'guides_rischi_upf_description'        => 'Obesity, inflammation, microbiome disruption: what research says about the risks of ultra-processed foods and how to reduce them in your daily diet.',
         'servizi_title'       => 'Services - faustobe',
         'servizi_description' => 'Custom web development, Android apps and LaTeX documents.',
+        'download_title'       => 'Download - faustobe',
+        'download_description' => 'Free ebooks to download: practical guides on food additives in 5 languages.',
     ],
 
     // Home page
@@ -242,9 +245,16 @@ return [
 
     // Works
     'works' => [
-        'title'       => 'Works',
-        'tagline'     => 'Portfolio under construction',
-        'description' => 'This section is under development. You\'ll soon find a collection of my projects and works here.',
+        'title'           => 'works',
+        'ecodes_title'    => 'E-Codes Reader',
+        'ecodes_desc'     => 'Android app for reading food additives. Scan a product\'s barcode and get the list of additives with risk classification, customisable profile for diets and allergens, Nutri-Score, NOVA Score and nutritional values. Local database of over 400 additives, works offline. No account, no tracking.',
+        'ecodes_link'     => 'App details',
+        'jigger_title'    => 'Jigger',
+        'jigger_desc'     => 'Custom Android app for a professional bartender. Work shift management, customisable cocktail inventory with search and custom additions, session history. Built for internal use, not published on Google Play.',
+        'gestionale_title' => 'Business management system',
+        'gestionale_desc'  => 'Custom ERP for a food industry company. Order management, active/passive invoicing, customer and supplier database, quotes, bank reconciliation, human resources management. System in production with 499 customers, 249 products, over 900 orders and 1200+ invoices managed.',
+        'tag_private'     => 'private use',
+        'tag_production'  => 'in production',
     ],
 
     // Guides section
@@ -360,6 +370,15 @@ return [
         'coming_soon'      => 'Coming soon',
         'coming_soon_desc' => 'New guides coming on additives, NOVA classification and much more.',
         'in_arrivo'        => 'Coming soon',
+    ],
+
+    // Download
+    'download' => [
+        'title'        => 'download',
+        'intro'        => 'Free resources to download. Practical guides and documentation produced in LaTeX.',
+        'ebooks_title' => 'Free ebooks',
+        'cta_text'     => 'Need technical documentation, manuals or ebooks in your language? I can produce them in LaTeX in professional format. Write me:',
+        'also_in'      => 'Also available in',
     ],
 
     // Services

@@ -1,0 +1,838 @@
+% ============================================================
+%  Mangia Consapevole — Guida pratica agli additivi alimentari
+%  faustobe.it | 2026 | CC BY-NC 4.0
+% ============================================================
+\documentclass[a5paper,12pt,oneside,openany]{book}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{ebgaramond}
+\usepackage[a5paper, top=2cm, bottom=3cm, inner=2.2cm, outer=3cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage[italian]{babel}
+
+% Colori
+\definecolor{verdescuro}{HTML}{2d6a4f}
+\definecolor{verdecharo}{HTML}{52b788}
+\definecolor{grigioscuro}{HTML}{2b2d42}
+\definecolor{giallo}{HTML}{d4a017}
+\definecolor{rosso}{HTML}{c1121f}
+\definecolor{blinfo}{HTML}{3a86ff}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=verdescuro,
+  urlcolor=verdescuro,
+  pdftitle={Mangia Consapevole},
+  pdfauthor={faustobe},
+}
+
+\usepackage{qrcode}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{microtype}
+
+% Riquadri colorati
+\tcbset{
+  boxbase/.style={
+    breakable, enhanced, arc=4pt, boxrule=0.8pt,
+    fonttitle=\bfseries\small,
+    before upper={\parskip=4pt},
+  }
+}
+
+\newcommand{\boxverde}[2]{%
+  \begin{tcolorbox}[boxbase,
+    colback=verdescuro!8!white, colframe=verdescuro, title={#1}]
+  #2\end{tcolorbox}}
+
+\newcommand{\boxgiallo}[2]{%
+  \begin{tcolorbox}[boxbase,
+    colback=giallo!12!white, colframe=giallo!80!black, title={#1}]
+  #2\end{tcolorbox}}
+
+\newcommand{\boxrosso}[2]{%
+  \begin{tcolorbox}[boxbase,
+    colback=rosso!8!white, colframe=rosso, title={#1}]
+  #2\end{tcolorbox}}
+
+\newcommand{\boxinfo}[2]{%
+  \begin{tcolorbox}[boxbase,
+    colback=blinfo!8!white, colframe=blinfo, title={#1}]
+  #2\end{tcolorbox}}
+
+% Stile pagina
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\footnotesize\textcolor{grigioscuro}{\textit{Mangia Consapevole\ \textbar\ faustobe.it}}}
+\fancyfoot[R]{\footnotesize\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\footnotesize\textcolor{grigioscuro}{\textit{Mangia Consapevole\ \textbar\ faustobe.it}}}%
+  \fancyfoot[R]{\footnotesize\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0.4pt}%
+}
+
+% Stile titoli capitolo
+\titleformat{\chapter}[display]
+  {\normalfont\LARGE\bfseries\color{verdescuro}}
+  {\chaptertitlename\ \thechapter}{10pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{30pt}
+
+% ============================================================
+\begin{document}
+
+% -------- COPERTINA --------
+\begin{titlepage}
+\pagecolor{verdescuro}
+\color{white}
+\vspace*{2.5cm}
+\begin{center}
+  {\fontsize{38}{44}\selectfont\bfseries Mangia Consapevole}\\[1.2cm]
+  \textcolor{verdecharo}{\rule{6cm}{0.6pt}}\\[1.2cm]
+  {\large\itshape Guida pratica agli additivi alimentari}\\[0.6cm]
+  {\normalsize Con E-Codes Reader per Android}\\[3cm]
+  {\normalsize\textcolor{verdecharo}{faustobe.it}}
+\end{center}
+\vfill
+\begin{center}
+  {\small Versione 1.0\ \textbullet\ 2026\ \textbullet\ CC BY-NC 4.0}
+\end{center}
+\end{titlepage}
+\nopagecolor
+
+\frontmatter
+\tableofcontents
+\mainmatter
+
+% ============================================================
+\chapter{Come usare l'app per fare la spesa consapevole}
+
+Impara a riconoscere gli alimenti più lavorati e scegliere quelli
+veramente semplici e naturali in pochi minuti, senza diventare
+un esperto di additivi.
+
+\section{Prima di scansionare, fai tre controlli rapidi}
+
+Prima ancora di aprire l'app, osserva la confezione. Le etichette
+frontali sono spesso pensate per sembrare più sani di quello che sono.
+
+\begin{itemize}
+  \item \textbf{Guarda il fronte della confezione.} Fai attenzione ai
+    claim come ``senza zucchero ma con dolcificanti'', ``senza grassi ma
+    con emulsionanti'', ``gusto extra'' o ``aromatizzato''. Spesso indicano
+    che il prodotto è stato molto modificato.
+  \item \textbf{Apri l'app e scansiona il prodotto.} Usa la fotocamera per
+    scansionare il codice a barre o carica una foto dell'etichetta.
+    L'app ti mostrerà subito la lista degli ingredienti e degli additivi.
+  \item \textbf{Controlla tre punti chiave.} Quanti additivi compaiono
+    (soprattutto i codici~E)? Quanto è lunga e complessa la lista
+    ingredienti? Quanti zuccheri, sale e grassi sono dichiarati?
+\end{itemize}
+
+Se rispondi ``molti'' o ``lunga/complicata'' a più di una domanda, ti
+trovi probabilmente davanti a un cibo molto lavorato.
+
+\section{Tre regole per capire subito se un cibo è ``troppo lavorato''}
+
+\textbf{Pochi ingredienti = meglio.} Se la lista è breve e contiene nomi
+familiari (es.\ ``farina, acqua, sale, olio''), il prodotto è poco lavorato
+e in genere più affidabile.
+
+\textbf{Molti ingredienti ``impronunciabili''.} Termini come ``amidi modificati'',
+``proteine isolate'', ``mono- e digliceridi degli acidi grassi'',
+``esaltatori di sapidità'' o ``aromi complessi'' indicano chiaramente un
+alimento molto processato.
+
+\textbf{Tanti codici~E e additivi.} Non tutti gli~E sono pericolosi, ma
+la loro presenza in massa --- coloranti, conservanti, stabilizzanti,
+emulsionanti --- indica un grado elevato di trasformazione industriale.
+
+\section{Come interpretare il risultato dell'app}
+
+Ogni prodotto riceve una valutazione rapida: pensa a questi colori come
+a un semaforo alimentare.
+
+\boxverde{Poco lavorato --- via libera}{Pochi ingredienti, pochi o nessun
+additivo~E. Zuccheri e sale moderati. Ottimo candidato per la spesa
+quotidiana.}
+
+\boxgiallo{Moderatamente lavorato --- con moderazione}{Alcuni~E, aromi
+naturali o zuccheri extra. Va bene ogni tanto, non come base di ogni
+pasto.}
+
+\boxrosso{Ultra-processato --- limita o evita}{Molti additivi, zuccheri
+extra, aromi complessi e grassi di origine industriale. Meglio tenerlo come
+vera eccezione, specialmente per i bambini.}
+
+\section{Come usare l'app in modo pratico in spesa}
+
+\textbf{1.~Inizia dal reparto frigo e colazione.} Scansiona yogurt, pane,
+latte, bevande. Cerca prodotti con pochi ingredienti, pochi~E, e zuccheri
+semplici (frutta, latte, zucchero di canna) invece di sciroppi e
+dolcificanti.
+
+\textbf{2.~Poi spostati ai dolci e snack.} Se la lista è lunghissima e
+piena di~E, l'app segnalerà rosso. In quei casi, scegli sempre
+l'alternativa più semplice (frutta, pane integrale, noci).
+
+\textbf{3.~Usa l'app per confrontare prodotti simili.} Cerca due prodotti
+dello stesso tipo nell'app. Spesso quello con meno ingredienti è solo
+leggermente meno appariscente sullo scaffale, ma molto più naturale.
+
+\textbf{4.~Lascia i ``rossi'' come eccezione, non come regola.} Non serve
+eliminare tutto ciò che è ultra-processato: basta ridurlo. Deciditi una
+soglia --- ad esempio, massimo 1--2 prodotti ``rossi'' alla settimana ---
+mentre il resto della spesa sia fatto di cibi semplici.
+
+\section{Tabella riepilogativa}
+
+{\small
+\begin{tabularx}{\textwidth}{|L|L|}
+\hline
+\rowcolor{verdescuro}\textcolor{white}{\textbf{Situazione nell'app}}
+  & \textcolor{white}{\textbf{Cosa fare in pratica}} \\
+\hline
+Pochi ingredienti, pochi/no~E
+  & Base quotidiana: yogurt semplice, pane integrale, passata di pomodoro \\
+\hline
+Alcuni~E, zuccheri moderati
+  & Ogni tanto, non come alimento principale \\
+\hline
+Tanti~E, zuccheri extra, aromi complessi
+  & Limita o evita: usalo solo come eccezione \\
+\hline
+\end{tabularx}
+}
+
+\section{Perché imparare a leggere gli additivi fa davvero la differenza}
+
+Riconoscere i cibi più lavorati non è ``fobia degli additivi'': è
+\textbf{attenzione alla qualità di quello che mangiamo}. Molti studi
+suggeriscono che ridurre i cibi ultra-processati aiuta sul lungo periodo
+il controllo del peso, la salute cardiovascolare e la stabilità del
+metabolismo.
+
+L'app ti dà uno strumento concreto: non serve ricordare ogni codice~E,
+basta imparare a riconoscere i segnali di troppa trasformazione.
+
+% ============================================================
+\chapter{Come leggere l'etichetta nutrizionale}
+
+Ingredienti, calorie, sale nascosto: impara a decifrare un'etichetta in
+meno di un minuto e smetti di comprare prodotti che sembrano sani ma non
+lo sono.
+
+\section{La lista degli ingredienti: dove guardare per prima cosa}
+
+Per legge, gli ingredienti sono elencati in \textbf{ordine decrescente di
+peso}: ciò che compare prima è presente in quantità maggiore. È il punto
+di partenza più importante dell'etichetta.
+
+\begin{itemize}
+  \item \textbf{Il primo ingrediente conta di più.} Se il primo
+    ingrediente è ``zucchero'', ``sciroppo di glucosio'' o ``olio di palma'',
+    il prodotto è costruito attorno a quell'elemento.
+  \item \textbf{Lunghezza della lista = grado di lavorazione.} Pane fatto
+    in casa: farina, acqua, sale, lievito --- 4 ingredienti. Pane
+    industriale da scaffale: può averne 15 o più.
+  \item \textbf{Cerca i nomi difficili da pronunciare.} Termini come
+    ``amido modificato'', ``mono- e digliceridi degli acidi grassi'',
+    ``carboxymethyl cellulose'' o ``idrogenato'' indicano ingredienti di
+    origine industriale.
+\end{itemize}
+
+\boxinfo{Regola pratica}{Se non riusciresti a trovare tutti gli ingredienti
+in un negozio di alimentari normale, probabilmente il prodotto è molto
+lavorato.}
+
+\section{La tabella nutrizionale: cosa guardare (e cosa ignorare)}
+
+\begin{description}
+  \item[Zuccheri] Meno di 5\,g per 100\,g è basso; tra 5 e 22,5\,g è
+    medio; sopra 22,5\,g è alto. Per le bevande il limite ``basso'' è
+    2,5\,g/100\,ml.
+  \item[Sale] Meno di 0,3\,g/100\,g è basso; sopra 1,5\,g/100\,g è
+    alto. Il sodio va moltiplicato per 2,5 per ottenere il sale.
+  \item[Grassi saturi] Meno di 1,5\,g/100\,g è accettabile; sopra
+    5\,g/100\,g è considerato alto.
+\end{description}
+
+\section{Porzioni vs 100\,g: il trucco che confonde}
+
+I valori nutrizionali vengono spesso indicati sia per 100\,g che ``per
+porzione''. Le aziende tendono a mettere in evidenza i valori per porzione
+--- ma le porzioni sono spesso sottostimate.
+
+\boxgiallo{Esempio}{Se la confezione dichiara 10\,g di zuccheri per
+porzione (30\,g) e tu ne mangi una ciotola da 60\,g, stai assumendo 20\,g
+di zuccheri --- quasi la metà della soglia giornaliera raccomandata.}
+
+\section{Il sale nascosto: dove si nasconde davvero}
+
+Il sale non si trova solo nei prodotti salati.
+
+\begin{itemize}
+  \item \textbf{Pane e prodotti da forno:} due fette di pane industriale
+    possono contenere 0,5--0,8\,g di sale.
+  \item \textbf{Cereali da colazione:} anche quelli ``sani'' e ``integrali''
+    possono contenere 0,8--1,2\,g di sale per 100\,g.
+  \item \textbf{Salse, sughi e condimenti:} possono contenere tra 1 e
+    3\,g di sale per 100\,g.
+\end{itemize}
+
+\boxinfo{Nota bene}{In etichetta potresti trovare ``sodio'' invece di
+``sale''. Per convertire: \textbf{sale = sodio \texttimes\ 2,5}.}
+
+\section{I claim nutrizionali: cosa significano davvero}
+
+I claim come ``senza grassi'', ``light'', ``ricco di fibre'' o ``0\% zuccheri''
+sono regolamentati dalla legge, ma possono trarre in inganno.
+
+\begin{itemize}
+  \item \textbf{``Senza zuccheri aggiunti''} non significa senza zuccheri:
+    può contenerne di naturali (fruttosio, lattosio) o dolcificanti
+    artificiali.
+  \item \textbf{``Light'' o ``ridotto''} significa ridotto del 30\%
+    rispetto al prodotto di riferimento. Spesso il grasso tolto è
+    sostituito con zuccheri o addensanti.
+  \item \textbf{``Ricco di fibre''} richiede almeno 6\,g/100\,g ma non
+    dice nulla sugli altri ingredienti: un biscotto ``ricco di fibre''
+    può contenere molto zucchero.
+\end{itemize}
+
+\section{Checklist rapida da usare al supermercato}
+
+\begin{enumerate}
+  \item Guarda il primo ingrediente: è un alimento vero?
+  \item Conta gli ingredienti: meno di 5 è ottimo; oltre 10--12 controlla
+    bene.
+  \item Controlla i codici~E: pochi o nessuno è un buon segnale.
+  \item Guarda sale e zuccheri per 100\,g: sale oltre 1,5\,g o zuccheri
+    oltre 22,5\,g sono valori alti.
+  \item Ignora i claim promozionali sul fronte: fida sempre della lista
+    ingredienti.
+\end{enumerate}
+
+% ============================================================
+\chapter{Additivi vs ultra-processati: qual è la differenza?}
+
+Avere molti codici~E non è la stessa cosa che essere ultra-processato.
+Capire la differenza ti aiuta a fare valutazioni più complete e precise.
+
+\section{Cosa sono gli additivi alimentari}
+
+Gli additivi alimentari sono sostanze aggiunte intenzionalmente agli
+alimenti per svolgere una funzione tecnologica: conservare, colorare,
+addensare, emulsionare, stabilizzare o migliorare il sapore. In Europa,
+ogni additivo approvato riceve un codice \textbf{E} e deve superare una
+valutazione di sicurezza dell'EFSA.
+
+\begin{itemize}
+  \item \textbf{Non tutti gli additivi sono sintetici.} L'acido citrico
+    (E330), la curcumina (E100), la lecitina di soia (E322) e l'acido
+    ascorbico (E300) sono additivi di origine naturale.
+  \item \textbf{Non tutti gli additivi sono pericolosi.} La stragrande
+    maggioranza degli~E approvati è considerata sicura alle dosi
+    consentite.
+  \item \textbf{Alcuni additivi meritano attenzione.} Coloranti azoici
+    (E102, E110, E122, E124, E129), nitrati (E249--E252), dolcificanti
+    intensivi (E950--E962): queste categorie hanno evidenze di rischio
+    più consistenti.
+\end{itemize}
+
+\section{Cosa sono i cibi ultra-processati}
+
+Il termine ``ultra-processato'' viene dalla \textbf{classificazione NOVA},
+sviluppata dall'Università di San Paolo. Non riguarda i nutrienti, ma il
+\emph{processo industriale} che ha prodotto l'alimento.
+
+Un cibo è ultra-processato (NOVA 4) quando contiene ingredienti che non
+si trovano in una cucina domestica: proteine isolate, amidi modificati,
+sciroppi di glucosio-fruttosio, aromi ``natura-identici'', emulsionanti,
+coloranti, stabilizzanti --- spesso in combinazioni complesse.
+
+\section{Quando coincidono --- e quando no}
+
+\boxverde{Additivi ma NON ultra-processato}{Formaggio con conservante E252:
+lavorato ma non NOVA~4. Vino con solfiti (E220): additivo naturale,
+prodotto tradizionale. Olio con vitamina~E (E306): minima lavorazione.}
+
+\boxrosso{Ultra-processato con POCHI additivi~E}{Pane da toast con amido
+modificato e aromi: non ha tanti~E ma è NOVA~4. Barrette proteiche con
+proteine isolate: pochi codici, ma fortemente trasformate.}
+
+\boxgiallo{Ultra-processato E con tanti additivi (il caso peggiore)}{Merendine:
+amidi modificati + coloranti + emulsionanti + aromi + dolcificanti. Salse
+industriali: conservanti + stabilizzanti + esaltatori di sapidità.}
+
+\section{Il doppio problema: perché entrambi contano}
+
+\begin{itemize}
+  \item \textbf{Rischi legati agli additivi specifici:} i coloranti azoici
+    e l'iperattività nei bambini (EFSA 2007); i nitrati nella carne
+    lavorata e le nitrosammine cancerogene; i dolcificanti intensivi e la
+    possibile alterazione del microbioma intestinale.
+  \item \textbf{Rischi legati all'ultra-lavorazione in sé:} studi su larga
+    scala (NutriNet-Santé, UK~Biobank) associano il consumo elevato di
+    NOVA~4 a obesità, diabete tipo~2, malattie cardiovascolari e alcuni
+    tumori --- indipendentemente dalla qualità nutrizionale.
+  \item \textbf{L'effetto combinazione:} gli studi sugli additivi testano
+    quasi sempre una sostanza alla volta. Nella vita reale mangiamo
+    combinazioni di 10--20 additivi diversi nello stesso pasto.
+\end{itemize}
+
+\section{Come riconoscerli in pratica}
+
+\begin{enumerate}
+  \item Guarda se ci sono ingredienti ``da laboratorio'': amidi modificati,
+    proteine isolate, sciroppi di glucosio-fruttosio, aromi
+    ``natura-identici''.
+  \item Conta i codici~E e identifica le categorie critiche: un~E
+    antiossidante naturale (E306) è molto diverso da un colorante azoico
+    (E102).
+  \item Considera il contesto del pasto: un pasto equilibrato con verdure
+    e legumi ``assorbe'' meglio qualche prodotto più lavorato.
+  \item Usa l'app come supporto, non come giudice assoluto.
+\end{enumerate}
+
+\boxinfo{Riassunto in una frase}{Un prodotto con un~E naturale non è un
+problema. Un prodotto con 15 ingredienti industriali senza nessun~E è
+comunque un ultra-processato. Guarda entrambe le cose.}
+
+% ============================================================
+\chapter{Classificazione NOVA: cos'è e come usarla}
+
+Il sistema NOVA classifica gli alimenti in base al grado di trasformazione
+industriale --- non alle calorie o ai nutrienti. Capire i quattro gruppi
+ti aiuta a fare scelte migliori ogni giorno.
+
+\section{Cos'è la classificazione NOVA}
+
+NOVA è un sistema sviluppato dal professor Carlos Monteiro all'Università
+di San Paolo (Brasile) e oggi adottato dall'OMS, dalla FAO e da numerosi
+studi epidemiologici globali.
+
+A differenza dei sistemi basati sui nutrienti (come il Nutri-Score),
+\textbf{NOVA classifica in base al grado di trasformazione industriale}:
+non ``quante calorie ha'', ma ``quanta industria è entrata nella sua
+produzione''.
+
+\section{Gruppo 1 --- Cibi non lavorati o minimamente lavorati}
+
+Sono alimenti di origine vegetale o animale che non hanno subito nessuna
+trasformazione industriale significativa, o solo processi fisici minimi
+(essiccazione, macinazione, raffreddamento, pastorizzazione).
+
+\textbf{Esempi:} frutta e verdura fresca o congelata, carne e pesce
+freschi, uova, legumi secchi, cereali in chicco (riso, avena, farro),
+latte fresco pastorizzato, yogurt naturale senza additivi.
+
+I cibi del Gruppo~1 dovrebbero costituire la base della dieta.
+
+\section{Gruppo 2 --- Ingredienti culinari lavorati}
+
+Sono sostanze estratte da alimenti del Gruppo~1 o dalla natura, usate in
+cucina per cucinare e condire. Non si mangiano da soli.
+
+\textbf{Esempi:} olio d'oliva, burro, aceto, sale, zucchero, miele,
+farina, amido di mais puro. Usali con moderazione.
+
+\section{Gruppo 3 --- Cibi lavorati}
+
+Sono prodotti ottenuti aggiungendo ingredienti del Gruppo~2 ad alimenti
+del Gruppo~1 (conservazione sotto sale, affumicatura, fermentazione,
+stagionatura). Riconoscibili perché contengono solo 2--3 ingredienti.
+
+\textbf{Esempi:} verdure in conserva, formaggi tradizionali (parmigiano,
+pecorino), prosciutto crudo di qualità, pane artigianale, vino.
+
+\section{Gruppo 4 --- Ultra-processati: il gruppo da limitare}
+
+Formulazioni industriali che non contengono alimenti interi o li usano
+in minima parte. Il segnale chiave: contengono ingredienti che \textbf{non
+si trovano in una cucina domestica}.
+
+\textbf{Ingredienti tipici:} proteine idrolizzate, amidi modificati,
+sciroppo di glucosio-fruttosio, oli idrogenati, aromi ``natura-identici'',
+coloranti artificiali, dolcificanti intensivi, emulsionanti (E471, E472).
+
+\boxrosso{Dati chiave}{In Italia circa il 14--18\% delle calorie
+giornaliere proviene da ultra-processati. In UK e USA la percentuale
+supera il 50--60\%. Già un consumo superiore al 20\% delle calorie da
+NOVA~4 è associato a rischi per la salute.}
+
+\section{NOVA nella spesa pratica}
+
+{\small
+\begin{tabularx}{\textwidth}{|L|L|L|L|}
+\hline
+\rowcolor{verdescuro}
+\textcolor{white}{\textbf{Gruppo}}
+  & \textcolor{white}{\textbf{Definizione}}
+  & \textcolor{white}{\textbf{Esempi}}
+  & \textcolor{white}{\textbf{In dieta}} \\
+\hline
+NOVA~1 & Non/min.\ lavorati & Frutta, verdura, uova, carne fresca & Base \\
+\hline
+NOVA~2 & Ingredienti culinari & Olio, sale, zucchero, farina & Con moderazione \\
+\hline
+NOVA~3 & Lavorati tradizionali & Conserve, formaggi, pane artigianale & Accettabile \\
+\hline
+NOVA~4 & Ultra-processati & Merendine, wurstel, cereali dolci & Limitare \\
+\hline
+\end{tabularx}
+}
+
+% ============================================================
+\chapter{Ingredienti da monitorare sulle etichette}
+
+Zuccheri nascosti, grassi pericolosi, additivi controversi e sodio in
+eccesso: impara a riconoscerli a colpo d'occhio.
+
+\section{Zuccheri: i 10 nomi nascosti sulle etichette}
+
+Lo zucchero non si chiama sempre ``zucchero''. Le aziende usano decine di
+varianti per distribuirlo in più voci della lista ingredienti.
+
+\begin{itemize}
+  \item \textbf{Sciroppo di glucosio-fruttosio} (il peggiore)
+  \item \textbf{Maltodestrine} (amido quasi interamente scomposto)
+  \item \textbf{Destrosio}, \textbf{Fruttosio}
+  \item \textbf{Succo di canna concentrato}, \textbf{Sciroppo di mais}
+  \item \textbf{Sciroppo di riso}, \textbf{Miele disidratato}
+  \item \textbf{Zucchero di cocco}, \textbf{Nettare di agave}
+\end{itemize}
+
+L'OMS raccomanda di mantenere gli zuccheri liberi sotto il \textbf{10\%
+delle calorie giornaliere} --- circa 50\,g al giorno per un adulto da
+2\,000\,kcal. Preferibilmente sotto il 5\% (25\,g).
+
+\section{Grassi da evitare: idrogenati e trans}
+
+Gli acidi grassi trans, prodotti dall'idrogenazione industriale degli oli
+vegetali, sono associati a un aumentato rischio cardiovascolare.
+
+\boxrosso{Grassi idrogenati e parzialmente idrogenati}{Cerca in etichetta:
+``olio vegetale parzialmente idrogenato'', ``grasso vegetale idrogenato'',
+``shortening''. In Europa sono vietati sopra 2\,g/100\,g di grasso dal
+2021. Evitali comunque.}
+
+\boxgiallo{Olio di palma: non è trans, ma\ldots}{Durante la raffinazione
+ad alte temperature si formano composti (3-MCPD, glicidolo) potenzialmente
+cancerogeni. Non è vietato, ma meglio limitarlo.}
+
+\section{Additivi controversi: i codici~E da conoscere}
+
+\begin{itemize}
+  \item \textbf{Coloranti azoici --- massima attenzione con i bambini:}
+    E102 (Tartrazina), E104, E110, E122, E124, E129. Studio EFSA 2007:
+    correlazione con iperattività nei bambini. In Europa obbligo di avviso:
+    ``può influire sull'attività e l'attenzione dei bambini''.
+  \item \textbf{Nitrati e nitriti --- carne lavorata:} E249--E252. In
+    presenza di proteine animali formano nitrosammine, classificate come
+    probabili cancerogeni (IARC gruppo~2A).
+  \item \textbf{Dolcificanti intensivi:} E950 (Acesulfame K), E951
+    (Aspartame), E952 (Ciclamato), E954 (Saccarina), E955 (Sucralosio).
+    L'OMS (2023) ha espresso cautela sull'uso cronico.
+\end{itemize}
+
+\section{Sodio nascosto: oltre il sale da cucina}
+
+Il sodio in eccesso alza la pressione arteriosa. Circa il 75\% del sodio
+nella dieta occidentale viene già nel prodotto confezionato.
+
+\textbf{Fonti principali:} pane, formaggi, salumi, piatti pronti, sughi
+in barattolo, dado e brodi, salse tipo soia, ketchup, cereali da colazione.
+
+Anche additivi come il glutammato monosodico (E621) e il benzoato di
+sodio (E211) contribuiscono al sodio totale.
+
+\section{La regola del 5: il filtro più veloce}
+
+\begin{enumerate}
+  \item Più di 5 ingredienti? Inizia a leggere con attenzione.
+  \item Zuccheri sopra 5\,g/100\,g? Controlla da dove vengono.
+  \item Sale sopra 0,5\,g/100\,g in un prodotto dolce? Segnale di
+    ultra-lavorazione.
+  \item Più di 5 additivi~E? Il prodotto è probabilmente ultra-processato.
+  \item Non riconosci 5 o più ingredienti? Rimettilo sullo scaffale.
+\end{enumerate}
+
+% ============================================================
+\chapter{Alimenti consigliati}
+
+Sostituire non eliminare: le alternative semplici, accessibili e spesso
+più economiche agli ultra-processati più comuni.
+
+\section{Il principio base: sostituire, non eliminare}
+
+Non si tratta di fare diete rigide. Si tratta di conoscere le alternative
+--- e di sceglierle quando sono disponibili e pratiche quanto il prodotto
+che sostituiscono.
+
+\textbf{La regola 80/20 funziona:} se l'80\% di quello che mangi è
+Gruppo~1--2 (NOVA), il 20\% di prodotti più lavorati non fa la differenza.
+La salute alimentare si misura sulla media settimanale, non sul singolo
+pasto.
+
+\section{Cereali e carboidrati: le scelte migliori}
+
+\textbf{Cereali consigliati:} avena in fiocchi (senza ingredienti
+aggiunti), riso integrale, farro in chicco, orzo perlato, grano saraceno,
+pasta integrale con sola semola integrale, pane di sola farina integrale
+(massimo 4--5 ingredienti).
+
+\textbf{Da limitare:} cereali da colazione con zucchero, pane da cassetta
+con amidi modificati, cracker con olio di palma, riso e pasta pre-cotti
+in busta con additivi.
+
+\boxinfo{Tip rapido per i cereali da colazione}{Se i zuccheri sono sopra
+10\,g/100\,g, stai mangiando un prodotto da dessert --- non una colazione
+sana.}
+
+\section{Proteine: le fonti migliori}
+
+\begin{itemize}
+  \item \textbf{Pesce e frutti di mare:} pesce fresco o surgelato senza
+    impanatura, sardine e sgombri in olio d'oliva, tonno al naturale,
+    acciughe.
+  \item \textbf{Uova e latticini:} uova intere, yogurt greco naturale,
+    ricotta, fiocchi di latte, formaggi stagionati con moderazione.
+  \item \textbf{Legumi:} lenticchie, ceci, fagioli, piselli. In scatola
+    al naturale sono già cotti e si aggiungono in 30 secondi a qualsiasi
+    pasto.
+\end{itemize}
+
+\section{Grassi buoni: i più semplici da aggiungere}
+
+\textbf{Fonti consigliate:} olio d'oliva extravergine, olio di lino crudo,
+noci, mandorle, nocciole, semi di lino, semi di chia, avocado, pesce
+azzurro, uova intere.
+
+\textbf{Con moderazione:} burro, olio di cocco, latte intero.
+
+\textbf{Da evitare:} margarine con grassi idrogenati, shortening vegetale,
+panna vegetale con emulsionanti.
+
+\section{Lista della spesa tipo}
+
+{\small
+\begin{tabularx}{\textwidth}{|L|L|}
+\hline
+\rowcolor{verdescuro}\textcolor{white}{\textbf{Categoria}}
+  & \textcolor{white}{\textbf{Prodotti consigliati}} \\
+\hline
+Cereali & Avena, riso integrale, farro, pasta integrale, pane artigianale \\
+\hline
+Legumi & Lenticchie, ceci, fagioli (secchi o in scatola al naturale) \\
+\hline
+Proteine animali & Uova, sardine, tonno al naturale, yogurt greco, ricotta \\
+\hline
+Verdure & Di stagione, fresche o surgelate senza additivi \\
+\hline
+Grassi & Olio EVO, noci, mandorle, semi di lino \\
+\hline
+Frutta & Intera di stagione, frutti di bosco surgelati senza zucchero \\
+\hline
+Condimenti & Aceto di mele, salsa di soia a bassa lavorazione, spezie \\
+\hline
+\end{tabularx}
+}
+
+% ============================================================
+\chapter{Perché gli alimenti ultra-processati fanno male}
+
+Le evidenze scientifiche sui rischi per la salute legati al consumo
+abituale di ultra-processati: obesità, infiammazione, microbiota,
+malattie croniche.
+
+\section{Obesità e alterazione del metabolismo}
+
+Gli alimenti ultra-processati non fanno ingrassare semplicemente perché
+sono calorici. Il meccanismo è più insidioso: sono progettati per essere
+\textbf{iper-appetibili} e interferiscono attivamente con i segnali
+naturali di sazietà.
+
+\boxinfo{Studio di Kevin Hall (NIH, 2019)}{In un trial clinico controllato,
+i partecipanti esposti a una dieta a base di ultra-processati consumavano
+in media \textbf{500 calorie in più al giorno} rispetto a chi mangiava
+cibi minimamente lavorati --- a parità di libertà di scelta. In due
+settimane, il gruppo UPF aveva guadagnato quasi un chilo.}
+
+\begin{itemize}
+  \item \textbf{Alta densità energetica:} gli UPF contengono in media
+    2,15\,kcal per grammo --- quasi il doppio rispetto ai cibi freschi.
+  \item \textbf{Stimolazione eccessiva dei centri del piacere:} la
+    combinazione di zucchero, sale, grassi e aromi attiva il sistema
+    dopaminergico. Si mangia anche in assenza di fame reale.
+  \item \textbf{Riduzione del peptide YY:} gli UPF abbassano i livelli
+    dell'ormone intestinale che segnala la sazietà al cervello.
+\end{itemize}
+
+\boxrosso{+41\% di rischio di obesità addominale}{Chi segue una dieta ad
+alto contenuto di UPF presenta un rischio superiore del 41\% di sviluppare
+obesità rispetto a chi ne consuma pochi.}
+
+\section{Infiammazioni e microbiota intestinale}
+
+Il consumo frequente di ultra-processati è associato a un aumento delle
+risposte immunitarie infiammatorie. Emulsionanti come la
+carbossimetilcellulosa (E466) e il polisorbato~80 (E433) alterano il
+muco protettivo intestinale anche a dosi consentite.
+
+Il processo di ultra-trasformazione priva gli alimenti di fibre e composti
+vegetali bioattivi, favorendo la \textbf{disbiosi} --- uno squilibrio del
+microbiota intestinale associato a insulino-resistenza e infiammazione
+cronica.
+
+\section{Un rischio sistemico: più meccanismi insieme}
+
+{\small
+\begin{tabularx}{\textwidth}{|L|L|L|}
+\hline
+\rowcolor{verdescuro}
+\textcolor{white}{\textbf{Meccanismo}}
+  & \textcolor{white}{\textbf{Effetto}}
+  & \textcolor{white}{\textbf{Conseguenza}} \\
+\hline
+Iper-appetibilità & Consumo eccessivo & Obesità, diabete tipo~2 \\
+\hline
+Carenza di fibre & Disbiosi intestinale & Infiammazione cronica, IBD \\
+\hline
+Additivi (emulsionanti) & Permeabilità intestinale & Malattie autoimmuni \\
+\hline
+Zuccheri e dolcificanti & Insulino-resistenza & Diabete tipo~2 \\
+\hline
+Sostituzione del cibo fresco & Carenza micronutrienti & Stress ossidativo \\
+\hline
+\end{tabularx}
+}
+
+\boxinfo{I grandi studi epidemiologici}{NutriNet-Santé (Francia, oltre
+100.000 partecipanti) e UK~Biobank (UK, oltre 500.000 partecipanti)
+associano il consumo elevato di UPF a maggiori rischi di cancro, malattie
+cardiovascolari, depressione e mortalità per tutte le cause ---
+indipendentemente dalla qualità nutrizionale dei singoli prodotti.}
+
+\section{Cosa fare in pratica}
+
+\begin{enumerate}
+  \item \textbf{Individua i tuoi UPF abituali:} cereali dolci, snack
+    confezionati, pane da cassetta, piatti pronti, bevande aromatizzate.
+  \item \textbf{Sostituisci uno alla volta:} avena al posto dei cereali
+    dolci, yogurt greco al posto di quello aromatizzato.
+  \item \textbf{Aumenta le fibre --- sono la priorità:} legumi, verdure,
+    cereali integrali, frutta intera.
+  \item \textbf{Usa l'app per identificare gli UPF nascosti:} molti
+    prodotti che sembrano sani sono in realtà NOVA~4.
+  \item \textbf{Non puntare alla perfezione:} anche un miglioramento
+    del 20--30\% nella qualità della dieta produce effetti misurabili
+    sulla salute nel medio termine.
+\end{enumerate}
+
+% ============================================================
+\chapter{Sicurezza alimentare per bambini e anziani}
+
+Stessa dose, effetti diversi: perché le categorie più vulnerabili
+richiedono attenzione particolare agli additivi e al sodio.
+
+\section{Perché bambini e anziani sono più vulnerabili}
+
+La stessa dose di additivo che un adulto sano metabolizza senza problemi
+può avere effetti diversi su un bambino piccolo o su una persona anziana.
+
+\begin{itemize}
+  \item \textbf{Bambini: peso corporeo basso, sistemi non maturi.} La dose
+    giornaliera accettabile (DGA) degli additivi è calcolata in mg per kg
+    di peso corporeo. Un bambino da 15\,kg che mangia una merenda da 30\,g
+    con coloranti riceve una dose relativa 4--5 volte superiore a quella
+    di un adulto da 70\,kg.
+  \item \textbf{Anziani: ridotta funzionalità renale ed epatica.} Con
+    l'età diminuisce la capacità di eliminare alcune sostanze. Il sodio
+    in eccesso impatta di più su chi soffre di ipertensione o
+    insufficienza renale.
+  \item \textbf{Effetti cumulativi:} non è il singolo gelato con coloranti
+    una volta al mese il problema. Se i bambini mangiano quotidianamente
+    prodotti con E102, E110, E122 a colazione, a merenda, a pranzo ---
+    l'effetto cumulativo diventa rilevante.
+\end{itemize}
+
+\section{Additivi critici per i bambini}
+
+\boxrosso{Coloranti azoici --- da evitare con i bambini}{E102 (Tartrazina),
+E104, E110, E122, E124, E129. In Europa obbligo di etichetta: \emph{``può
+influire sull'attività e sull'attenzione dei bambini''}. Si trovano in
+caramelle colorate, bibite arancioni/rosse, gelatine, dolci industriali.}
+
+\boxgiallo{Dolcificanti intensivi --- non approvati per bambini piccoli}{E951
+(Aspartame), E950 (Acesulfame K), E955 (Sucralosio), E954 (Saccarina).
+Non autorizzati negli alimenti per lattanti (Reg.\ UE 1333/2008). Si
+trovano in yogurt ``0\% zucchero'', bibite ``light'', caramelle senza
+zucchero.}
+
+\section{Cosa limitare negli anziani}
+
+\begin{itemize}
+  \item \textbf{Sodio: il rischio principale.} I piatti pronti, i salumi,
+    i formaggi stagionati e i brodi industriali sono i principali veicoli.
+    Obiettivo: meno di 5\,g di sale al giorno.
+  \item \textbf{Fosfati: interferiscono con calcio e ossa.} E338--E341,
+    E450--E452 sono comuni nei prodotti a base di carne lavorata e
+    formaggi fusi. Un consumo elevato interferisce con l'assorbimento del
+    calcio.
+  \item \textbf{Interazioni con farmaci:} la vitamina~K nei vegetali con
+    i warfarinici, il pompelmo con le statine. Non si tratta di evitare
+    questi alimenti, ma di mantenere la dieta costante.
+\end{itemize}
+
+\section{Lista sicura per la spesa}
+
+{\small
+\begin{tabularx}{\textwidth}{|L|L|L|}
+\hline
+\rowcolor{verdescuro}
+\textcolor{white}{\textbf{Additivo/Ingrediente}}
+  & \textcolor{white}{\textbf{Bambini}}
+  & \textcolor{white}{\textbf{Anziani}} \\
+\hline
+Coloranti azoici (E102, E110, E122, E124, E129) & Evitare & Limitare \\
+\hline
+Dolcificanti intensivi (aspartame, sucralosio\ldots) & Non per bambini piccoli & Con moderazione \\
+\hline
+Sodio elevato (\textgreater1,5\,g sale/100\,g) & Limitare & Evitare \\
+\hline
+Fosfati (E338--E452) & Moderazione & Limitare \\
+\hline
+Caffeina (energy drink, soft drink) & Evitare \textless12 anni & Attenzione \\
+\hline
+Nitrati/nitriti (E249--E252) in salumi & Limitare & Limitare \\
+\hline
+\end{tabularx}
+}
+
+% ============================================================
+% Pagina finale con QR code
+\cleardoublepage
+\thispagestyle{empty}
+\begin{center}
+\vspace*{3cm}
+{\large\bfseries\color{verdescuro} Scarica E-Codes Reader}\\[0.8cm]
+{\normalsize Scansiona il QR code per trovare l'app\\
+sul Google Play Store.}\\[1.5cm]
+\qrcode[height=3.5cm]{https://play.google.com/store/apps/details?id=com.faustobe.ecodes}\\[1.5cm]
+\textcolor{grigioscuro}{\footnotesize\textit{faustobe.it\ \textbullet\ Versione 1.0\ \textbullet\ 2026\ \textbullet\ CC BY-NC 4.0}}
+\end{center}
+
+\end{document}

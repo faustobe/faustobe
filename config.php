@@ -39,6 +39,7 @@ $ROUTES = [
     'guides/sicurezza-alimentare-bambini-e-anziani' => 'guides/sicurezza-alimentare-bambini-e-anziani.php',
     'guides/rischi-alimenti-ultraprocessati'        => 'guides/rischi-alimenti-ultraprocessati.php',
     'servizi'                                       => 'servizi.php',
+    'download'                                      => 'download.php',
 ];
 
 // Page-specific CSS files (route => additional CSS)
@@ -57,6 +58,7 @@ $PAGE_CSS = [
     'guides/cibi-consigliati'                       => '/css/guide.css',
     'guides/sicurezza-alimentare-bambini-e-anziani' => '/css/guide.css',
     'guides/rischi-alimenti-ultraprocessati'        => '/css/guide.css',
+    'download'                                      => '/css/app-page.css',
 ];
 
 // Legacy route redirects — 301 permanent
