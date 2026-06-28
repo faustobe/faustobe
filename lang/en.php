@@ -409,6 +409,7 @@ return [
     // Services
     'servizi' => [
         'title'          => 'services',
+        'lead'           => 'Tailor-made solutions for businesses and professionals: from development to delivery, with a focus on quality, timelines and concrete results.',
         'web_title'      => 'Web development and management applications',
         'web_text'       => 'Custom websites and management applications for small and medium-sized businesses. Backend, databases, administration panels. Tailored development based on the specific needs of each project.',
         'android_title'  => 'Android apps',

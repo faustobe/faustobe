@@ -576,68 +576,6 @@ footer a:hover {
     max-width: 800px;
 }
 
-.page-header {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.page-photo {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.page-header h1 {
-    font-size: var(--fs-h1);
-    color: var(--text-primary);
-}
-
-.page-body p {
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
-    line-height: 1.7;
-}
-
-.page-divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 2.5rem 0;
-}
-
-.page-contact h2 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: var(--text-primary);
-}
-
-.page-contact p {
-    color: var(--text-secondary);
-    margin-bottom: 0.75rem;
-}
-
-.page-contact .contact-email {
-    font-size: 1.2rem;
-}
-
-.page-contact .contact-email a {
-    font-weight: 500;
-}
-
-@media (max-width: 768px) {
-    .page-header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .page-photo {
-        width: 80px;
-        height: 80px;
-    }
-}
-
 /* ==========================================================================
    PAGINE LEGALI (Privacy, Contatti)
    ========================================================================== */
@@ -690,4 +628,203 @@ footer a:hover {
 
 .legal-page .contact-email a {
     font-weight: 500;
+}
+
+/* ==========================================================================
+   PAGINA SERVIZI
+   ========================================================================== */
+
+.page-intro {
+    text-align: center;
+    max-width: 60ch;
+    margin: 0 auto 3rem;
+}
+
+.page-intro__title {
+    font-size: var(--fs-h1);
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.page-intro__lead {
+    font-size: var(--fs-lead);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.service-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    font-size: 1.7rem;
+    margin-bottom: 1.25rem;
+}
+
+.service-card__title {
+    font-size: var(--fs-h3);
+    color: var(--text-primary);
+    margin-bottom: 0.6rem;
+}
+
+.service-card__text {
+    font-size: 0.97rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+.services-cta {
+    text-align: center;
+    max-width: 600px;
+    margin: 3.5rem auto 0;
+    padding: 2.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.services-cta__title {
+    font-size: var(--fs-h2);
+    color: var(--text-primary);
+    margin-bottom: 0.6rem;
+}
+
+.services-cta__text {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 700px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   PAGINA WHOAMI
+   ========================================================================== */
+
+.whoami-hero {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 1rem auto 2.5rem;
+}
+
+.whoami-hero__photo {
+    width: 160px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
+}
+
+.whoami-hero__body {
+    flex: 1;
+    min-width: 260px;
+}
+
+.whoami-hero__name {
+    font-size: var(--fs-h1);
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.whoami-hero__bio {
+    font-size: var(--fs-lead);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.whoami-contact {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2.25rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.whoami-contact__title {
+    font-size: var(--fs-h2);
+    color: var(--text-primary);
+    margin-bottom: 0.6rem;
+}
+
+.whoami-contact__text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.whoami-contact__actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+
+.whoami-contact__note {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-top: 0.75rem;
+}
+
+@media (max-width: 600px) {
+    .whoami-hero {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* ==========================================================================
+   PAGINE LEGALI — rifinitura
+   ========================================================================== */
+
+.legal-page .last-updated {
+    display: inline-block;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    padding: 0.2rem 0.8rem;
+    font-size: 0.82rem;
+}
+
+.legal-page h2 {
+    font-size: var(--fs-h3);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.4rem;
 }

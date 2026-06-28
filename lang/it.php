@@ -409,6 +409,7 @@ return [
     // Servizi
     'servizi' => [
         'title'          => 'servizi',
+        'lead'           => 'Soluzioni su misura per aziende e professionisti: dallo sviluppo alla consegna, con attenzione a qualità, tempi e risultati concreti.',
         'web_title'      => 'Sviluppo web e applicazioni gestionali',
         'web_text'       => 'Siti web e applicazioni gestionali personalizzate per piccole e medie imprese. Backend, database, pannelli di amministrazione. Sviluppo su misura in base alle esigenze specifiche del progetto.',
         'android_title'  => 'App Android',

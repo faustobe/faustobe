@@ -409,6 +409,7 @@ return [
     // Dienste
     'servizi' => [
         'title'          => 'Dienste',
+        'lead'           => 'Ma&szlig;geschneiderte L&ouml;sungen f&uuml;r Unternehmen und Fachleute: von der Entwicklung bis zur Lieferung, mit Fokus auf Qualit&auml;t, Termine und konkrete Ergebnisse.',
         'web_title'      => 'Webentwicklung und Verwaltungsanwendungen',
         'web_text'       => 'Ma&szlig;geschneiderte Websites und Verwaltungsanwendungen f&uuml;r kleine und mittlere Unternehmen. Backend, Datenbanken, Administrationspanels. Individuelle Entwicklung nach den spezifischen Anforderungen des Projekts.',
         'android_title'  => 'Android-Apps',

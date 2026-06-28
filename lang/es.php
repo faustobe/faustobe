@@ -409,6 +409,7 @@ return [
     // Servicios
     'servizi' => [
         'title'          => 'servicios',
+        'lead'           => 'Soluciones a medida para empresas y profesionales: del desarrollo a la entrega, con atenci&oacute;n a la calidad, los plazos y resultados concretos.',
         'web_title'      => 'Desarrollo web y aplicaciones de gesti&oacute;n',
         'web_text'       => 'Sitios web y aplicaciones de gesti&oacute;n personalizadas para peque&ntilde;as y medianas empresas. Backend, bases de datos, paneles de administraci&oacute;n. Desarrollo a medida seg&uacute;n las necesidades espec&iacute;ficas del proyecto.',
         'android_title'  => 'Apps Android',
