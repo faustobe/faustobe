@@ -37,7 +37,17 @@ $ogLocales = ['it' => 'it_IT', 'en' => 'en_US', 'es' => 'es_ES', 'fr' => 'fr_FR'
 $ogLocale  = $ogLocales[$currentLang] ?? 'it_IT';
 $isGuide   = strpos($currentRoute, 'guides/') === 0;
 $ogType    = $isGuide ? 'article' : 'website';
-$ogImage   = absAsset('/assets/og-default.jpg');
+// Open Graph image per sezione (fallback: og-default)
+$ogImages = [
+    'apps/ecodes' => '/assets/og-ecodes.jpg',
+    'servizi'     => '/assets/og-servizi.jpg',
+    'works'       => '/assets/og-works.jpg',
+    'download'    => '/assets/og-download.jpg',
+    'guides'      => '/assets/og-guides.jpg',
+];
+$ogImagePath = $ogImages[$currentRoute]
+    ?? ($isGuide ? '/assets/og-guides.jpg' : '/assets/og-default.jpg');
+$ogImage   = absAsset($ogImagePath);
 $descPlain = html_entity_decode($pageDescription, ENT_QUOTES, 'UTF-8');
 $titlePlain = html_entity_decode($pageTitle, ENT_QUOTES, 'UTF-8');
 
