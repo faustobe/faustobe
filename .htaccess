@@ -5,6 +5,9 @@ RewriteEngine On
 # 0. Don't rewrite the front controller itself
 RewriteRule ^index\.php$ - [L]
 
+# 0b. Dynamic XML sitemap
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
 # 1. Static files (CSS, JS, images, fonts, APK) — serve directly
 RewriteCond %{REQUEST_URI} \.(css|js|png|jpg|jpeg|gif|svg|ico|woff2?|ttf|eot|apk|webp|avif)$ [NC]
 RewriteRule ^ - [L]

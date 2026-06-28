@@ -99,6 +99,33 @@ function asset(string $path): string {
 }
 
 /**
+ * Absolute origin (scheme + host) of the current request.
+ * Used for SEO tags that require absolute URLs (canonical, hreflang, OG).
+ */
+function siteOrigin(): string {
+    $https = (!empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) !== 'off')
+        || (($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https')
+        || (($_SERVER['SERVER_PORT'] ?? '') == 443);
+    $scheme = $https ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'] ?? 'faustobe.it';
+    return $scheme . '://' . $host;
+}
+
+/**
+ * Absolute URL for a route in a given language (canonical / hreflang / OG).
+ */
+function absLangUrl(string $lang, string $route = ''): string {
+    return siteOrigin() . langUrl($lang, $route);
+}
+
+/**
+ * Absolute URL for a static asset (e.g. Open Graph images).
+ */
+function absAsset(string $path): string {
+    return siteOrigin() . asset($path);
+}
+
+/**
  * Normalize a route string: trim slashes, remove trailing index.
  *
  * @param string $route

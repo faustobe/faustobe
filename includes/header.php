@@ -30,6 +30,59 @@ $metaKeys = [
 $metaKey = $metaKeys[$currentRoute] ?? ['home_title', 'home_description'];
 $pageTitle = t('meta.' . $metaKey[0]);
 $pageDescription = t('meta.' . $metaKey[1]);
+
+// SEO: absolute URLs, social cards, structured data
+$canonical = absLangUrl($currentLang, $currentRoute);
+$ogLocales = ['it' => 'it_IT', 'en' => 'en_US', 'es' => 'es_ES', 'fr' => 'fr_FR', 'de' => 'de_DE'];
+$ogLocale  = $ogLocales[$currentLang] ?? 'it_IT';
+$isGuide   = strpos($currentRoute, 'guides/') === 0;
+$ogType    = $isGuide ? 'article' : 'website';
+$ogImage   = absAsset('/assets/og-default.jpg');
+$descPlain = html_entity_decode($pageDescription, ENT_QUOTES, 'UTF-8');
+$titlePlain = html_entity_decode($pageTitle, ENT_QUOTES, 'UTF-8');
+
+// JSON-LD graph
+$ldGraph = [
+    [
+        '@type'    => 'Person',
+        'name'     => 'faustobe',
+        'url'      => absLangUrl($DEFAULT_LANG, ''),
+        'email'    => 'faustobe@gmail.com',
+        'jobTitle' => 'Software developer',
+        'sameAs'   => ['https://github.com/faustobe'],
+    ],
+    [
+        '@type' => 'WebSite',
+        'name'  => 'faustobe',
+        'url'   => absLangUrl($DEFAULT_LANG, ''),
+    ],
+];
+if ($currentRoute === 'apps/ecodes') {
+    $ldGraph[] = [
+        '@type'            => 'SoftwareApplication',
+        'name'             => 'E-Codes Reader',
+        'operatingSystem'  => 'Android',
+        'applicationCategory' => 'HealthApplication',
+        'url'              => $canonical,
+        'description'      => $descPlain,
+        'offers'           => ['@type' => 'Offer', 'price' => '0', 'priceCurrency' => 'EUR'],
+    ];
+}
+if ($isGuide) {
+    $ldGraph[] = [
+        '@type'       => 'Article',
+        'headline'    => $titlePlain,
+        'description' => $descPlain,
+        'inLanguage'  => $currentLang,
+        'url'         => $canonical,
+        'author'      => ['@type' => 'Person', 'name' => 'faustobe'],
+        'publisher'   => ['@type' => 'Organization', 'name' => 'faustobe'],
+    ];
+}
+$jsonLd = json_encode(
+    ['@context' => 'https://schema.org', '@graph' => $ldGraph],
+    JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT
+);
 ?>
 <!DOCTYPE html>
 <html lang="<?= e($currentLang) ?>">
@@ -43,11 +96,34 @@ $pageDescription = t('meta.' . $metaKey[1]);
 <?php if ($pageCSS): ?>
     <link rel="stylesheet" href="<?= asset($pageCSS) ?>" />
 <?php endif; ?>
-    <!-- hreflang tags for SEO -->
+    <!-- Canonical -->
+    <link rel="canonical" href="<?= e($canonical) ?>" />
+
+    <!-- hreflang (URL assoluti) -->
 <?php foreach ($SUPPORTED_LANGUAGES as $code => $name): ?>
-    <link rel="alternate" hreflang="<?= $code ?>" href="<?= langUrl($code, $currentRoute) ?>" />
+    <link rel="alternate" hreflang="<?= $code ?>" href="<?= e(absLangUrl($code, $currentRoute)) ?>" />
 <?php endforeach; ?>
-    <link rel="alternate" hreflang="x-default" href="<?= langUrl($DEFAULT_LANG, $currentRoute) ?>" />
+    <link rel="alternate" hreflang="x-default" href="<?= e(absLangUrl($DEFAULT_LANG, $currentRoute)) ?>" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="<?= $ogType ?>" />
+    <meta property="og:site_name" content="faustobe" />
+    <meta property="og:title" content="<?= e($pageTitle) ?>" />
+    <meta property="og:description" content="<?= e($pageDescription) ?>" />
+    <meta property="og:url" content="<?= e($canonical) ?>" />
+    <meta property="og:image" content="<?= e($ogImage) ?>" />
+    <meta property="og:locale" content="<?= $ogLocale ?>" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<?= e($pageTitle) ?>" />
+    <meta name="twitter:description" content="<?= e($pageDescription) ?>" />
+    <meta name="twitter:image" content="<?= e($ogImage) ?>" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+<?= $jsonLd ?>
+    </script>
 </head>
 
 <body>
