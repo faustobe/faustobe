@@ -2,6 +2,9 @@ DirectoryIndex index.php
 
 RewriteEngine On
 
+# Security: blocca l'accesso web a .git (la web root e' un repo git in prod)
+RewriteRule (^|/)\.git(/|$) - [F,L]
+
 # 0. Don't rewrite the front controller itself
 RewriteRule ^index\.php$ - [L]
 
