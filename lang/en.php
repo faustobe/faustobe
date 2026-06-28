@@ -113,7 +113,7 @@ return [
         'title'          => 'Privacy Policy',
         'last_updated'   => 'Last updated: February 2026',
         'controller_title' => 'Data controller',
-        'controller_text'  => 'The data controller is faustobe, contactable at the email address:',
+        'controller_text'  => 'The data controller is Fausto Bernardini, contactable at the email address:',
         'data_title'       => 'Data collected',
         'data_text1'       => 'This website does not collect personal data from users. No profiling cookies or tracking tools are used.',
         'data_text2'       => 'The only data stored locally is the theme preference (light/dark), saved in the browser via localStorage and not transmitted to external servers.',

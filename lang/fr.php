@@ -113,7 +113,7 @@ return [
         'title'          => 'Politique de confidentialit&eacute;',
         'last_updated'   => 'Derni&egrave;re mise &agrave; jour : F&eacute;vrier 2026',
         'controller_title' => 'Responsable du traitement',
-        'controller_text'  => 'Le responsable du traitement des donn&eacute;es est faustobe, joignable &agrave; l\'adresse email :',
+        'controller_text'  => 'Le responsable du traitement des donn&eacute;es est Fausto Bernardini, joignable &agrave; l\'adresse email :',
         'data_title'       => 'Donn&eacute;es collect&eacute;es',
         'data_text1'       => 'Ce site web ne collecte pas de donn&eacute;es personnelles des utilisateurs. Aucun cookie de profilage ni outil de suivi n\'est utilis&eacute;.',
         'data_text2'       => 'La seule donn&eacute;e stock&eacute;e localement est la pr&eacute;f&eacute;rence de th&egrave;me (clair/sombre), enregistr&eacute;e dans le navigateur via localStorage et non transmise &agrave; des serveurs externes.',

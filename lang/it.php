@@ -113,7 +113,7 @@ return [
         'title'          => 'Privacy Policy',
         'last_updated'   => 'Ultimo aggiornamento: Febbraio 2026',
         'controller_title' => 'Titolare del trattamento',
-        'controller_text'  => 'Il titolare del trattamento dei dati è faustobe, contattabile all\'indirizzo email:',
+        'controller_text'  => 'Il titolare del trattamento dei dati è Fausto Bernardini, contattabile all\'indirizzo email:',
         'data_title'       => 'Dati raccolti',
         'data_text1'       => 'Questo sito web non raccoglie dati personali degli utenti. Non vengono utilizzati cookie di profilazione o strumenti di tracciamento.',
         'data_text2'       => 'L\'unico dato memorizzato localmente è la preferenza del tema (chiaro/scuro), salvata nel browser tramite localStorage e non trasmessa a server esterni.',

@@ -113,7 +113,7 @@ return [
         'title'          => 'Datenschutzerkl&auml;rung',
         'last_updated'   => 'Letzte Aktualisierung: Februar 2026',
         'controller_title' => 'Verantwortlicher',
-        'controller_text'  => 'Der Verantwortliche f&uuml;r die Datenverarbeitung ist faustobe, erreichbar unter der E-Mail-Adresse:',
+        'controller_text'  => 'Der Verantwortliche f&uuml;r die Datenverarbeitung ist Fausto Bernardini, erreichbar unter der E-Mail-Adresse:',
         'data_title'       => 'Erhobene Daten',
         'data_text1'       => 'Diese Website erhebt keine personenbezogenen Daten der Nutzer. Es werden keine Profiling-Cookies oder Tracking-Tools verwendet.',
         'data_text2'       => 'Die einzige lokal gespeicherte Information ist die Theme-Pr&auml;ferenz (hell/dunkel), die im Browser &uuml;ber localStorage gespeichert und nicht an externe Server &uuml;bertragen wird.',

@@ -1,6 +1,6 @@
 <main class="whoami-page">
     <header class="whoami-hero">
-        <img class="whoami-hero__photo" src="<?= asset('/assets/cyb-nana.png') ?>" alt="faustobe" />
+        <img class="whoami-hero__photo" src="<?= asset('/assets/cyb-nana.png') ?>" alt="faustobe" width="160" height="200" />
         <div class="whoami-hero__body">
             <h1 class="whoami-hero__name"><?= t('whoami.title') ?></h1>
             <p class="whoami-hero__bio"><?= t('whoami.p1') ?></p>

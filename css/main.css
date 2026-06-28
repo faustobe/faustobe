@@ -118,7 +118,9 @@ a:focus {
    HEADER + NAVIGAZIONE
    ========================================================================== */
 
-header {
+/* Header del sito (solo quello top-level: gli <header> dentro le pagine
+   — es. .whoami-hero, .page-intro — non devono diventare sticky) */
+body > header {
     background-color: var(--bg-secondary);
     border-bottom: 1px solid var(--border);
     position: sticky;
