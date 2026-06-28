@@ -29,7 +29,7 @@
                         <h3 class="service-item__title"><?= t('servizi.automation_title') ?></h3>
                         <p class="service-item__desc"><?= t('home.svc_automation_desc') ?></p>
                     </div>
-                    <img class="service-item__inline" src="<?= asset('/assets/works/onirika.jpg') ?>" alt="" loading="lazy" />
+                    <img class="service-item__inline" src="<?= asset('/assets/works/automazione.jpg') ?>" alt="" loading="lazy" />
                 </a>
                 <a href="<?= url('servizi') ?>" class="service-item" data-preview="android">
                     <div class="service-item__icon">📱</div>
@@ -51,7 +51,7 @@
 
             <div class="services-preview" aria-hidden="true">
                 <img class="services-preview__img is-active" data-preview="web" src="<?= asset('/assets/works/adg.jpg') ?>" alt="" loading="lazy" />
-                <img class="services-preview__img" data-preview="automation" src="<?= asset('/assets/works/onirika.jpg') ?>" alt="" loading="lazy" />
+                <img class="services-preview__img" data-preview="automation" src="<?= asset('/assets/works/automazione.jpg') ?>" alt="" loading="lazy" />
                 <img class="services-preview__img" data-preview="android" src="<?= asset('/assets/works/jigger-0.jpeg') ?>" alt="" loading="lazy" />
                 <img class="services-preview__img" data-preview="latex" src="<?= asset('/assets/works/ebook-guide.jpg') ?>" alt="" loading="lazy" />
             </div>
