@@ -4,7 +4,7 @@ $ebooks = [
         'title'    => 'Mangia Consapevole',
         'desc'     => 'Guida pratica agli additivi alimentari con E-Codes Reader. 8 capitoli, formato ebook A5.',
         'btn'      => 'Scarica PDF',
-        'file'     => 'ecodes-guide-it.pdf',
+        'file'     => 'ecodes-guide.pdf',
         'label'    => 'IT',
     ],
     'en' => [
@@ -40,7 +40,7 @@ $ebooks = [
 $current = $ebooks[$currentLang] ?? $ebooks['it'];
 $others  = array_filter($ebooks, fn($k) => $k !== $currentLang, ARRAY_FILTER_USE_KEY);
 ?>
-<main class="page-content download-page">
+<main class="content-page download-page">
     <h1 class="page-title"><?= t('download.title') ?></h1>
     <p class="page-lead"><?= t('download.intro') ?></p>
 

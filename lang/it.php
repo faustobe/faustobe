@@ -67,9 +67,34 @@ return [
 
     // Home page
     'home' => [
-        'headline'        => 'tuxed and free',
-        'subtitle'        => 'App Android e soluzioni web scalabili',
+        'eyebrow'          => 'tuxed and free',
+        'headline'         => 'App Android e soluzioni web, su misura.',
+        'subtitle'         => 'Sviluppo applicazioni Android, siti e gestionali web, ebook e documenti LaTeX. Dall\'idea alla pubblicazione.',
+        'cta_services'     => 'Scopri i servizi',
+        'cta_apps'         => 'Le mie app',
+
+        'services_title'   => 'Cosa faccio',
+        'services_lead'    => 'Soluzioni su misura, dallo sviluppo alla consegna.',
+        'svc_web_desc'     => 'Siti e gestionali web personalizzati per piccole e medie imprese.',
+        'svc_android_desc' => 'App Android native, dall\'idea alla pubblicazione su Google Play.',
+        'svc_latex_desc'   => 'PDF professionali, ebook e documentazione tecnica in LaTeX.',
+        'svc_automation_desc' => 'Integro sistemi e automatizzo processi ripetitivi: meno lavoro manuale, meno errori.',
+        'services_more'    => 'Tutti i servizi',
+
+        'apps_title'       => 'Le mie app',
+        'apps_lead'        => 'Progetti personali, pubblicati e in arrivo.',
         'ecodes_card_desc' => 'Scansiona codici a barre alimentari e scopri gli additivi nei prodotti.',
+        'app_soon'         => 'In arrivo',
+        'santibailor_desc' => 'App Android in arrivo.',
+        'drop_desc'        => 'App Android in arrivo.',
+
+        'guides_title'     => 'Guide pratiche',
+        'guides_lead'      => 'Consigli concreti per scelte alimentari più consapevoli.',
+        'guides_more'      => 'Tutte le guide',
+
+        'contact_title'    => 'Hai un progetto in mente?',
+        'contact_text'     => 'Raccontami la tua idea: troviamo insieme la soluzione giusta.',
+        'contact_cta'      => 'Scrivimi',
     ],
 
     // Whoami + Contact
@@ -390,6 +415,8 @@ return [
         'android_text'   => 'Sviluppo di applicazioni Android native, dall\'idea alla pubblicazione su Google Play o per uso interno/aziendale. Ciclo completo: progettazione, sviluppo, test, distribuzione. Adatto sia ad app pubbliche che a strumenti personalizzati per uso privato o professionale.',
         'latex_title'    => 'Documenti e ebook in LaTeX',
         'latex_text'     => 'Produzione di PDF professionali, ebook, documentazione tecnica e pubblicazioni in LaTeX. Adatto a manuali aziendali, tesi, pubblicazioni accademiche, cataloghi tecnici.',
+        'automation_title' => 'Automazione dei flussi aziendali',
+        'automation_text'  => 'Automazione di processi e flussi di lavoro aziendali: integrazione tra sistemi diversi, sincronizzazione dei dati, notifiche e attività ripetitive eseguite in automatico. Meno lavoro manuale, meno errori, più tempo per ciò che conta.',
         'contact_text'   => 'Per preventivi e collaborazioni:',
     ],
 

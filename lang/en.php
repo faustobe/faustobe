@@ -67,9 +67,34 @@ return [
 
     // Home page
     'home' => [
-        'headline'        => 'tuxed and free',
-        'subtitle'        => 'Android apps and scalable web solutions',
+        'eyebrow'          => 'tuxed and free',
+        'headline'         => 'Android apps and web solutions, tailor-made.',
+        'subtitle'         => 'I build Android apps, websites and business web tools, ebooks and LaTeX documents. From idea to release.',
+        'cta_services'     => 'See services',
+        'cta_apps'         => 'My apps',
+
+        'services_title'   => 'What I do',
+        'services_lead'    => 'Tailor-made solutions, from development to delivery.',
+        'svc_web_desc'     => 'Custom websites and management tools for small and medium businesses.',
+        'svc_android_desc' => 'Native Android apps, from idea to release on Google Play.',
+        'svc_latex_desc'   => 'Professional PDFs, ebooks and technical documentation in LaTeX.',
+        'svc_automation_desc' => 'I integrate systems and automate repetitive processes: less manual work, fewer errors.',
+        'services_more'    => 'All services',
+
+        'apps_title'       => 'My apps',
+        'apps_lead'        => 'Personal projects, released and upcoming.',
         'ecodes_card_desc' => 'Scan food barcodes and discover the additives in products.',
+        'app_soon'         => 'Coming soon',
+        'santibailor_desc' => 'Android app coming soon.',
+        'drop_desc'        => 'Android app coming soon.',
+
+        'guides_title'     => 'Practical guides',
+        'guides_lead'      => 'Concrete tips to make more conscious food choices.',
+        'guides_more'      => 'All guides',
+
+        'contact_title'    => 'Have a project in mind?',
+        'contact_text'     => 'Tell me about your idea: let\'s find the right solution together.',
+        'contact_cta'      => 'Get in touch',
     ],
 
     // Whoami + Contact
@@ -390,6 +415,8 @@ return [
         'android_text'   => 'Development of native Android applications, from idea to publication on Google Play or for internal/corporate use. Full cycle: design, development, testing, distribution. Suitable for both public apps and custom tools for private or professional use.',
         'latex_title'    => 'Documents and ebooks in LaTeX',
         'latex_text'     => 'Production of professional PDFs, ebooks, technical documentation and publications in LaTeX. Suitable for corporate manuals, theses, academic publications, technical catalogues.',
+        'automation_title' => 'Business workflow automation',
+        'automation_text'  => 'Automation of business processes and workflows: integration between different systems, data synchronization, notifications and repetitive tasks running automatically. Less manual work, fewer errors, more time for what matters.',
         'contact_text'   => 'For quotes and collaborations:',
     ],
 

@@ -88,7 +88,14 @@ function langUrl(string $lang, string $route = ''): string {
  */
 function asset(string $path): string {
     global $BASE_PATH;
-    return $BASE_PATH . $path;
+    $url = $BASE_PATH . $path;
+    // Cache-busting: append the file's modification time so browsers always
+    // fetch a fresh copy after a change (no more manual hard-refresh).
+    $file = dirname(__DIR__) . $path;
+    if (is_file($file)) {
+        $url .= (strpos($url, '?') === false ? '?' : '&') . 'v=' . filemtime($file);
+    }
+    return $url;
 }
 
 /**

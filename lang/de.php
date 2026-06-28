@@ -67,9 +67,34 @@ return [
 
     // Home page
     'home' => [
-        'headline'        => 'tuxed and free',
-        'subtitle'        => 'Android-Apps und skalierbare Webl&ouml;sungen',
+        'eyebrow'          => 'tuxed and free',
+        'headline'         => 'Android-Apps und Web-L&ouml;sungen, ma&szlig;geschneidert.',
+        'subtitle'         => 'Ich entwickle Android-Apps, Websites und Web-Verwaltungstools, Ebooks und LaTeX-Dokumente. Von der Idee bis zur Ver&ouml;ffentlichung.',
+        'cta_services'     => 'Leistungen ansehen',
+        'cta_apps'         => 'Meine Apps',
+
+        'services_title'   => 'Was ich mache',
+        'services_lead'    => 'Ma&szlig;geschneiderte L&ouml;sungen, von der Entwicklung bis zur Lieferung.',
+        'svc_web_desc'     => 'Individuelle Websites und Verwaltungstools f&uuml;r kleine und mittlere Unternehmen.',
+        'svc_android_desc' => 'Native Android-Apps, von der Idee bis zur Ver&ouml;ffentlichung bei Google Play.',
+        'svc_latex_desc'   => 'Professionelle PDFs, Ebooks und technische Dokumentation in LaTeX.',
+        'svc_automation_desc' => 'Ich integriere Systeme und automatisiere wiederkehrende Prozesse: weniger manuelle Arbeit, weniger Fehler.',
+        'services_more'    => 'Alle Leistungen',
+
+        'apps_title'       => 'Meine Apps',
+        'apps_lead'        => 'Pers&ouml;nliche Projekte, ver&ouml;ffentlicht und in Vorbereitung.',
         'ecodes_card_desc' => 'Scannen Sie Lebensmittel-Barcodes und entdecken Sie die Zusatzstoffe in Produkten.',
+        'app_soon'         => 'Demn&auml;chst',
+        'santibailor_desc' => 'Android-App in Vorbereitung.',
+        'drop_desc'        => 'Android-App in Vorbereitung.',
+
+        'guides_title'     => 'Praktische Leitf&auml;den',
+        'guides_lead'      => 'Konkrete Tipps f&uuml;r bewusstere Lebensmittelentscheidungen.',
+        'guides_more'      => 'Alle Leitf&auml;den',
+
+        'contact_title'    => 'Haben Sie ein Projekt im Kopf?',
+        'contact_text'     => 'Erz&auml;hlen Sie mir von Ihrer Idee: Wir finden gemeinsam die richtige L&ouml;sung.',
+        'contact_cta'      => 'Kontakt aufnehmen',
     ],
 
     // Whoami + Contact
@@ -390,6 +415,8 @@ return [
         'android_text'   => 'Entwicklung nativer Android-Anwendungen, von der Idee bis zur Ver&ouml;ffentlichung auf Google Play oder f&uuml;r den internen/betrieblichen Einsatz. Vollst&auml;ndiger Zyklus: Konzeption, Entwicklung, Test, Verteilung. Geeignet f&uuml;r &ouml;ffentliche Apps ebenso wie f&uuml;r individuelle Werkzeuge f&uuml;r den privaten oder professionellen Einsatz.',
         'latex_title'    => 'Dokumente und E-Books in LaTeX',
         'latex_text'     => 'Erstellung professioneller PDFs, E-Books, technischer Dokumentationen und Publikationen in LaTeX. Geeignet f&uuml;r Unternehmenshandb&uuml;cher, Abschlussarbeiten, wissenschaftliche Ver&ouml;ffentlichungen und technische Kataloge.',
+        'automation_title' => 'Automatisierung von Gesch&auml;ftsabl&auml;ufen',
+        'automation_text'  => 'Automatisierung von Gesch&auml;ftsprozessen und Arbeitsabl&auml;ufen: Integration verschiedener Systeme, Datensynchronisation, Benachrichtigungen und wiederkehrende Aufgaben laufen automatisch. Weniger manuelle Arbeit, weniger Fehler, mehr Zeit f&uuml;r das Wesentliche.',
         'contact_text'   => 'F&uuml;r Angebote und Kooperationen:',
     ],
 

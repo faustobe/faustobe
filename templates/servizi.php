@@ -7,6 +7,11 @@
     </section>
 
     <section class="page-body">
+        <h2><?= t('servizi.automation_title') ?></h2>
+        <p><?= t('servizi.automation_text') ?></p>
+    </section>
+
+    <section class="page-body">
         <h2><?= t('servizi.android_title') ?></h2>
         <p><?= t('servizi.android_text') ?></p>
     </section>

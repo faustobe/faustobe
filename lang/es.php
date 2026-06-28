@@ -67,9 +67,34 @@ return [
 
     // Home page
     'home' => [
-        'headline'        => 'tuxed and free',
-        'subtitle'        => 'Apps Android y soluciones web escalables',
+        'eyebrow'          => 'tuxed and free',
+        'headline'         => 'Apps Android y soluciones web, a medida.',
+        'subtitle'         => 'Desarrollo apps Android, sitios y gestores web, ebooks y documentos LaTeX. De la idea a la publicaci&oacute;n.',
+        'cta_services'     => 'Ver servicios',
+        'cta_apps'         => 'Mis apps',
+
+        'services_title'   => 'Qu&eacute; hago',
+        'services_lead'    => 'Soluciones a medida, del desarrollo a la entrega.',
+        'svc_web_desc'     => 'Sitios web y gestores personalizados para peque&ntilde;as y medianas empresas.',
+        'svc_android_desc' => 'Apps Android nativas, de la idea a la publicaci&oacute;n en Google Play.',
+        'svc_latex_desc'   => 'PDF profesionales, ebooks y documentaci&oacute;n t&eacute;cnica en LaTeX.',
+        'svc_automation_desc' => 'Integro sistemas y automatizo procesos repetitivos: menos trabajo manual, menos errores.',
+        'services_more'    => 'Todos los servicios',
+
+        'apps_title'       => 'Mis apps',
+        'apps_lead'        => 'Proyectos personales, publicados y pr&oacute;ximos.',
         'ecodes_card_desc' => 'Escanea c&oacute;digos de barras de alimentos y descubre los aditivos en los productos.',
+        'app_soon'         => 'Pr&oacute;ximamente',
+        'santibailor_desc' => 'App Android pr&oacute;ximamente.',
+        'drop_desc'        => 'App Android pr&oacute;ximamente.',
+
+        'guides_title'     => 'Gu&iacute;as pr&aacute;cticas',
+        'guides_lead'      => 'Consejos concretos para elegir alimentos de forma m&aacute;s consciente.',
+        'guides_more'      => 'Todas las gu&iacute;as',
+
+        'contact_title'    => '&iquest;Tienes un proyecto en mente?',
+        'contact_text'     => 'Cu&eacute;ntame tu idea: encontramos juntos la soluci&oacute;n adecuada.',
+        'contact_cta'      => 'Escr&iacute;beme',
     ],
 
     // Whoami + Contact
@@ -390,6 +415,8 @@ return [
         'android_text'   => 'Desarrollo de aplicaciones Android nativas, desde la idea hasta la publicaci&oacute;n en Google Play o para uso interno/empresarial. Ciclo completo: dise&ntilde;o, desarrollo, pruebas, distribuci&oacute;n. Adecuado tanto para apps p&uacute;blicas como para herramientas personalizadas de uso privado o profesional.',
         'latex_title'    => 'Documentos y ebooks en LaTeX',
         'latex_text'     => 'Producci&oacute;n de PDFs profesionales, ebooks, documentaci&oacute;n t&eacute;cnica y publicaciones en LaTeX. Adecuado para manuales empresariales, tesis, publicaciones acad&eacute;micas y cat&aacute;logos t&eacute;cnicos.',
+        'automation_title' => 'Automatizaci&oacute;n de flujos de trabajo',
+        'automation_text'  => 'Automatizaci&oacute;n de procesos y flujos de trabajo: integraci&oacute;n entre sistemas distintos, sincronizaci&oacute;n de datos, notificaciones y tareas repetitivas ejecutadas autom&aacute;ticamente. Menos trabajo manual, menos errores, m&aacute;s tiempo para lo que importa.',
         'contact_text'   => 'Para presupuestos y colaboraciones:',
     ],
 
